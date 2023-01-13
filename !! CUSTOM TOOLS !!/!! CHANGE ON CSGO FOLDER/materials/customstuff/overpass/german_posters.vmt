@@ -1,0 +1,9 @@
+"LightMappedGeneric"
+{
+	"$baseTexture" "customstuff/overpass/german_posters"
+
+	"$alphatest" "1"
+	"$decal" "1"
+
+
+}

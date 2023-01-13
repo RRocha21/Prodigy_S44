@@ -1,0 +1,6 @@
+// ### This basic VMT was written based on the e:\valvegames\tools\python\templateStrings.pyc script ###
+"VertexLitGeneric"
+{
+	$baseTexture "customstuff/anubis/sign006_color"
+	"$surfaceprop" 			"metal"
+}
