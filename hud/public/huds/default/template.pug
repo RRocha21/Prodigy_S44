@@ -16,8 +16,7 @@ html
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
     link(rel='stylesheet', href='https://csshake.surge.sh/csshake.min.cs  s')
   body
-    section
-     .bomb
+    section 
      .sponsor
       .inner
      .bigger_sponsor 
@@ -160,10 +159,10 @@ html
       .right
       .text FIREPOWER
      .header_container
-      .line
-      .left_logo_container
+      //.line
+      //.left_logo_container
         .logo
-      .right_logo_container
+      //.right_logo_container
         .logo
       .time 
       .left_series
@@ -181,6 +180,11 @@ html
       .round_container
         .round_text
       .snow
+      .left_separator
+      .right_separator
+      .bomb_countdown_container
+        .background 
+        .bomb
       .Pause_Left
         .Pause_Text Tactical Pause 1/4
           .Txt 
@@ -188,22 +192,24 @@ html
         .Pause_Text Tactical Pause 1/4
           .Txt
       .win_container_left
-        .text WINS THE ROUND!
       .win_container_right
+      .win_text_left 
         .text WINS THE ROUND!
-      .team_money_left 
+      .win_text_right 
+        .text WINS THE ROUND!
+      //.team_money_left 
         .top_text 
           .text MONEY
         .bottom_text
-      .team_equip_left 
+      //.team_equip_left 
         .top_text 
           .text EQUIPMENT
         .bottom_text
-      .team_money_right
+      //.team_money_right
         .top_text 
           .text MONEY
         .bottom_text
-      .team_equip_right 
+      //.team_equip_right 
         .top_text 
           .text EQUIPMENT
         .bottom_text
@@ -211,13 +217,12 @@ html
       .Left_Team 
         .Background
         .Progress
-        .txt NICOODOZ
       .Right_Team
         .Background
         .Progress
-        .txt NICOODOZ
       .Center_Bar
-        .Center_Txt 
+        .Player_Txt NICOODOZ
+        .Center_Txt PLANTING THE BOMB
     .Spam_A   
       .Spam_BG
         .Top_Spam
@@ -272,9 +277,11 @@ html
         .ammo_txt 100
     .players_left_container 
       #player1(class="player_container")
+       .background
        .photo_container
         .photo_player 
           img(src='../../files/img/players/1.png')
+        .photo_player_shade
        .diamond
        .number
        .flash
@@ -284,26 +291,34 @@ html
         .icon
         .frags
        .top_bar
-        .helmet
-        .armor
-        .bomb_defuse
         .health_bar
         .health_bar_bg
-        .health_icon
-        .health_text
-        .player_name
+       .health_icon
+       .health_text
+       .helmet
+       .armor_background
+       .armor
+       .bomb_defuse_background
+       .bomb_defuse
+       .player_name
        .bottom_bar
         .k_icon 
         .k 
         .d_icon
         .d 
         .moneys
+        .moneys_background
         .grenades
         .weapon_icon
       #player2(class="player_container")
+       .background
+       .armor_background
+       .helmet
+       .armor
        .photo_container
         .photo_player 
-          img(src='../../files/img/players/1.png')    
+          img(src='../../files/img/players/1.png')   
+        .photo_player_shade 
        .Round_Kills
         .background
         .icon
@@ -313,26 +328,31 @@ html
        .flash
        .flash_2
        .top_bar
-        .armor
-        .helmet
-        .bomb_defuse
         .health_bar
         .health_bar_bg
-        .health_icon
-        .health_text
-        .player_name
+       .health_icon
+       .health_text
+       .bomb_defuse_background
+       .bomb_defuse
+       .player_name
        .bottom_bar
         .k_icon
         .k 
         .d_icon
         .d 
         .moneys
+        .moneys_background
         .grenades
         .weapon_icon
       #player3(class="player_container")
+       .background
+       .armor_background
+       .helmet
+       .armor
        .photo_container
         .photo_player 
-          img(src='../../files/img/players/1.png')      
+          img(src='../../files/img/players/1.png')    
+        .photo_player_shade  
        .Round_Kills
         .background
         .icon
@@ -342,26 +362,28 @@ html
        .flash
        .flash_2
        .top_bar
-        .armor
-        .helmet
-        .bomb_defuse
         .health_bar
         .health_bar_bg
-        .health_icon
-        .health_text
-        .player_name
+       .health_icon
+       .health_text
+       .bomb_defuse_background
+       .bomb_defuse
+       .player_name
        .bottom_bar
         .k_icon
         .k 
         .d_icon
         .d 
         .moneys
+        .moneys_background
         .grenades
         .weapon_icon
       #player4(class="player_container")
+       .background
        .photo_container
         .photo_player 
           img(src='../../files/img/players/1.png')
+        .photo_player_shade
        .Round_Kills
         .background
         .icon
@@ -371,26 +393,31 @@ html
        .flash
        .flash_2
        .top_bar
-        .armor
-        .helmet
-        .bomb_defuse
         .health_bar
         .health_bar_bg
-        .health_icon
-        .health_text
-        .player_name
+       .health_icon
+       .health_text
+       .armor_background
+       .helmet
+       .armor
+       .bomb_defuse_background
+       .bomb_defuse
+       .player_name
        .bottom_bar
         .k_icon
         .k 
         .d_icon
         .d 
         .moneys
+        .moneys_background
         .grenades
         .weapon_icon
       #player5(class="player_container")
+       .background
        .photo_container
         .photo_player 
           img(src='../../files/img/players/1.png')
+        .photo_player_shade
        .Round_Kills
         .background
         .icon
@@ -400,20 +427,23 @@ html
        .flash
        .flash_2
        .top_bar
-        .armor
-        .helmet
-        .bomb_defuse
         .health_bar
         .health_bar_bg
-        .health_icon
-        .health_text
-        .player_name
+       .health_icon
+       .health_text
+       .armor_background
+       .helmet
+       .armor
+       .bomb_defuse_background
+       .bomb_defuse
+       .player_name
        .bottom_bar
         .k_icon
         .k 
         .d_icon
         .d 
         .moneys
+        .moneys_background
         .grenades
         .weapon_icon
     .players_right_container 
