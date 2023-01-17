@@ -2055,9 +2055,6 @@ function updatePage(data) {
         $(".header_container>.team_equip_left>.top_text").css("-webkit-background-clip", "text");
         $(".header_container>.team_equip_left>.top_text").css("-webkit-text-fill-color", "transparent");
 
-        $(".header_container>.Pause_Left>.Pause_Text").css("background", "rgb("+left_color+")");
-        $(".header_container>.Pause_Left>.Pause_Text").css("-webkit-background-clip", "text");
-        $(".header_container>.Pause_Left>.Pause_Text").css("-webkit-text-fill-color", "transparent");
         
     } else if (teams.left.side == "t") {
         $(".Spam_A > .Spam_BG > .Bottom_Spam > .Inc > .Inc_Icon ").css('background-image', 'url("../../files/img/Icons/Icons/Utility_TMolo.png")');
@@ -2073,9 +2070,6 @@ function updatePage(data) {
         $(".header_container>.team_equip_left>.top_text").css("-webkit-background-clip", "text");
         $(".header_container>.team_equip_left>.top_text").css("-webkit-text-fill-color", "transparent");
 
-        $(".header_container>.Pause_Left>.Pause_Text").css("background", "rgb("+left_color+")");
-        $(".header_container>.Pause_Left>.Pause_Text").css("-webkit-background-clip", "text");
-        $(".header_container>.Pause_Left>.Pause_Text").css("-webkit-text-fill-color", "transparent");
 
     }
 
@@ -2092,10 +2086,7 @@ function updatePage(data) {
         $(".header_container>.team_equip_right>.top_text").css("background", "rgb("+right_color+")");
         $(".header_container>.team_equip_right>.top_text").css("-webkit-background-clip", "text");
         $(".header_container>.team_equip_right>.top_text").css("-webkit-text-fill-color", "transparent");
-
-        $(".header_container>.Pause_Right>.Pause_Text").css("background", "rgb("+right_color+")");
-        $(".header_container>.Pause_Right>.Pause_Text").css("-webkit-background-clip", "text");
-        $(".header_container>.Pause_Right>.Pause_Text").css("-webkit-text-fill-color", "transparent");
+;
         
 
     } else if (teams.right.side == "t") {
@@ -2112,9 +2103,6 @@ function updatePage(data) {
         $(".header_container>.team_equip_right>.top_text").css("-webkit-background-clip", "text");
         $(".header_container>.team_equip_right>.top_text").css("-webkit-text-fill-color", "transparent");
 
-        $(".header_container>.Pause_Right>.Pause_Text").css("background", "rgb("+right_color+")");
-        $(".header_container>.Pause_Right>.Pause_Text").css("-webkit-background-clip", "text");
-        $(".header_container>.Pause_Right>.Pause_Text").css("-webkit-text-fill-color", "transparent");
     }
 
     // Update Logos
@@ -2655,32 +2643,94 @@ function updatePage(data) {
 
                 $(".Top_Bar>.Timer_BG>.Timer").text(count_minute + ":" + count_seconds);
                 if (side == "left") {
-                    $(".header_container>.Pause_Left").css("opacity", "1");
-                    $(".header_container>.Pause_Left>.Pause_Text").html("tactical Pause " + pause_now_left + "/4");
-                    // $(".Top_Bar>.Top_BG>.Pause>.Pause_Text>.txt").html("Tactical Pause");
-                    $(".header_container>.Pause_Left").css("transition", "all 0.4s ease-out 0s").css("transform", "translate(0px, 0px)");
+                    $(".header_container>.Pause_Left>.Pause_Text").html("TACTITAL PAUSE");
+                    if (pause_now_left == 0) {
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("border", "solid 2px rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("border", "solid 2px rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_3").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_3").css("border", "solid 2px rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_4").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_4").css("border", "solid 2px rgb(246,246,246)");
+                    }
+                    if (pause_now_left == 1) {
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                    } else if (pause_now_left == 2) {
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("border", "solid 2px rgb(" + right_color + ")");
+                    } else if (pause_now_left == 3) {
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_3").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_3").css("border", "solid 2px rgb(" + right_color + ")");
+                    } else if (pause_now_left == 4) {
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_2").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_3").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_3").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_4").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Left>.Lower_container>.pause_4").css("border", "solid 2px rgb(" + right_color + ")");
+                    }
+                    $(".header_container>.Pause_Left").css("transition", "opacity 1.5s ease 0s").css("opacity", "1");
+                    $(".header_container>.Pause_Left>.Lower_container").css("transition", "all 0.8s ease-out 0.5s").css("transform", "translate(0px, 0px)");
 
                 } else if (side == "right") {
-                    $(".header_container>.Pause_Right").css("opacity", "1");
-                    $(".header_container>.Pause_Right>.Pause_Text").html("tactical Pause " + pause_now_right + "/4");
-                    // $(".Top_Bar>.Top_BG>.Pause>.Pause_Text>.txt").html("Tactical Pause");
-                    $(".header_container>.Pause_Right").css("transition", "all 0.4s ease-out 0s").css("transform", "translate(0px, 0px)");
+                    $(".header_container>.Pause_Right>.Pause_Text").html("TACTITAL PAUSE");
+                    if (pause_now_right == 0) {
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("border", "solid 2px rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("border", "solid 2px rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_3").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_3").css("border", "solid 2px rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_4").css("background", "rgb(246,246,246)");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_4").css("border", "solid 2px rgb(246,246,246)");
+                    }
+                    if (pause_now_right == 1) {
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                    } else if (pause_now_right == 2) {
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("border", "solid 2px rgb(" + right_color + ")");
+                    } else if (pause_now_right == 3) {
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_3").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_3").css("border", "solid 2px rgb(" + right_color + ")");
+                    } else if (pause_now_right == 4) {
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_1").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_2").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_3").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_3").css("border", "solid 2px rgb(" + right_color + ")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_4").css("background", "rgb("+right_color+")");
+                        $(".header_container>.Pause_Right>.Lower_container>.pause_4").css("border", "solid 2px rgb(" + right_color + ")");
+                    }
+                    $(".header_container>.Pause_Right").css("transition", "opacity 1.5s ease 0s").css("opacity", "1");
+                    $(".header_container>.Pause_Right>.Lower_container").css("transition", "all 0.8s ease-out 0.5s").css("transform", "translate(0px, 0px)");
                 }
             }
 
             function stopAnimationPause(side) {
-                    if ($(".header_container>.Pause_Left>.Pause_Text").text() == "tactical Pause " + pause_now_left + "/4") {
-                        $(".header_container>.Pause_Left").css("transition", "all 0.4s ease-out 0s").css("transform", "translateX(250px)");
-                        $(".header_container>.Pause_Right").css("transition", "all 0.4s ease-out 0s").css("transform", "translateX(-250px)");
-                        $(".header_container>.Pause_Left").css("opacity", "0");
-                        $(".header_container>.Pause_Right").css("opacity", "0");
-                    }
-                    if ($(".header_container>.Pause_Right>.Pause_Text").text() == "tactical Pause " + pause_now_right + "/4") {
-                        $(".header_container>.Pause_Left").css("transition", "all 0.4s ease-out 0s").css("transform", "translateX(250px)");
-                        $(".header_container>.Pause_Right").css("transition", "all 0.4s ease-out 0s").css("transform", "translateX(-250px)");
-                        $(".header_container>.Pause_Left").css("opacity", "0");
-                        $(".header_container>.Pause_Right").css("opacity", "0");
-                    };
+                        $(".header_container>.Pause_Left").css("transition", "opacity 1s ease 0.5s").css("opacity", "0");
+                        $(".header_container>.Pause_Left>.Lower_container").css("transition", "all 0.8s ease-out 0.5s").css("transform", "translate(0px, -26px)");
+                        $(".header_container>.Pause_Left>.Pause_Text").html("");
+                        $(".header_container>.Pause_Right").css("transition", "opacity 0.5s ease 0s").css("opacity", "0");
+                        $(".header_container>.Pause_Right>.Lower_container").css("transition", "all 0.8s ease-out 0.5s").css("transform", "translate(0px, -26px)");
+                        $(".header_container>.Pause_Right>.Pause_Text").html("");
             }
 
             var countdown = Math.abs(Math.ceil(phase.phase_ends_in));

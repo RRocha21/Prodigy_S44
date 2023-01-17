@@ -4,7 +4,7 @@
   top: 0px;
   width: 1920px;
   height: 1080px;
-  z-index: 98;
+  z-index: 73;
 }
 .Title {
   position: absolute;
@@ -12,7 +12,7 @@
   top: 0px;
   width: 1920px;
   height: 1080px;
-  z-index: 97;
+  z-index: 72;
 }
 .Pause_Title {
   font-size: 24px;
@@ -25,18 +25,18 @@
   -webkit-transform: matrix( 0.76439992153905,4.64162037251135e-17,-0.00017714668695,0.76439992153905,0,0);
   -ms-transform: matrix( 0.76439992153905,4.64162037251135e-17,-0.00017714668695,0.76439992153905,0,0);
   position: absolute;
-  left: 610.333px;
+  left: 1121.333px;
   top: 86px;
-  z-index: 96;
+  z-index: 71;
 }
 .White_Container {
   background-color: rgb(236, 236, 236);
   position: absolute;
-  left: 605px;
+  left: 1116px;
   top: 86px;
   width: 200px;
   height: 26px;
-  z-index: 95;
+  z-index: 70;
 }
 .Used {
   position: absolute;
@@ -44,69 +44,69 @@
   top: 0px;
   width: 1920px;
   height: 1080px;
-  z-index: 93;
+  z-index: 68;
 }
 ._4 {
-  background-image: -moz-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
+  border-width: 2px;
+  border-color: rgb(236, 236, 236);
+  border-style: solid;
   position: absolute;
-  left: 743px;
+  left: 1254px;
   top: 121px;
-  width: 27px;
-  height: 9px;
-  z-index: 92;
+  width: 23px;
+  height: 5px;
+  z-index: 67;
 }
 ._3 {
-  background-image: -moz-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
+  border-width: 2px;
+  border-color: rgb(236, 236, 236);
+  border-style: solid;
   position: absolute;
-  left: 709px;
+  left: 1220px;
   top: 121px;
-  width: 28px;
-  height: 9px;
-  z-index: 91;
+  width: 24px;
+  height: 5px;
+  z-index: 66;
 }
 ._2 {
-  background-image: -moz-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
+  border-width: 2px;
+  border-color: rgb(236, 236, 236);
+  border-style: solid;
   position: absolute;
-  left: 675px;
+  left: 1186px;
   top: 121px;
-  width: 28px;
-  height: 9px;
-  z-index: 90;
+  width: 24px;
+  height: 5px;
+  z-index: 65;
 }
 ._1 {
-  background-image: -moz-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
+  background-image: -moz-linear-gradient( 90deg, rgb(183,0,0) 0%, rgb(224,83,83) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(183,0,0) 0%, rgb(224,83,83) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(183,0,0) 0%, rgb(224,83,83) 100%);
   position: absolute;
-  left: 641px;
+  left: 1152px;
   top: 121px;
   width: 27px;
   height: 9px;
-  z-index: 89;
+  z-index: 64;
 }
 .Black_Container {
   background-color: rgb(47, 47, 47);
   position: absolute;
-  left: 631px;
+  left: 1142px;
   top: 112px;
   width: 148px;
   height: 26px;
-  z-index: 88;
+  z-index: 63;
 }
 .BG_Team {
-  background-image: -moz-linear-gradient( -90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -webkit-linear-gradient( -90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
-  background-image: -ms-linear-gradient( -90deg, rgb(52,110,161) 0%, rgb(0,187,199) 100%);
+  background-image: -moz-linear-gradient( -90deg, rgb(196,48,60) 0%, rgb(224,83,83) 100%);
+  background-image: -webkit-linear-gradient( -90deg, rgb(196,48,60) 0%, rgb(224,83,83) 100%);
+  background-image: -ms-linear-gradient( -90deg, rgb(196,48,60) 0%, rgb(224,83,83) 100%);
   position: absolute;
-  left: 564px;
+  left: 1074px;
   top: 35px;
-  width: 285px;
+  width: 283px;
   height: 61px;
-  z-index: 86;
+  z-index: 61;
 }
