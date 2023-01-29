@@ -942,13 +942,13 @@ sub {
 
 
 .header_container>.left_name {
-    font-size: 31px;
-    font-family: 'HelveticaNowText';
+    font-size: 42px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236, 236, 236);
     text-transform: uppercase;
-    line-height: 2;
+    line-height: 1.4;
     letter-spacing: 2;
     position: absolute;
     left: 90px;
@@ -961,13 +961,13 @@ sub {
 }
 
 .header_container>.right_name {
-    font-size: 31px;
-    font-family: 'HelveticaNowText';
+    font-size: 42px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236, 236, 236);
     text-transform: uppercase;
-    line-height: 2;
+    line-height: 1.4;
     letter-spacing: 2;
     position: absolute;
     right: 90px;
@@ -1000,7 +1000,7 @@ sub {
 }
 
 .header_container>.left_score {
-    font-size: 58px;
+    font-size: 50px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
@@ -1008,7 +1008,7 @@ sub {
     background: rgb(0,0,255);
     color: rgb(236, 236, 236);
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1.2;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -1020,7 +1020,7 @@ sub {
 }
 
 .header_container>.right_score {
-    font-size: 58px;
+    font-size: 50px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
@@ -1028,7 +1028,7 @@ sub {
     background: rgb(0,0,255);
     color: rgb(236, 236, 236);
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1.2;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -3171,20 +3171,20 @@ sub {
 .Team_A>.TeamMoney>.Upper_Container>.txt {
     position: absolute;
     left: 0px;
-    top: 4px;
+    top: 1px;
     width: 105px;
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 16px;
-    font-family: 'HelveticaNowText';
+    font-size: 20px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1.1;
+    letter-spacing: 3;
+    line-height: 1;
     text-align: center;
 }
 
@@ -3241,20 +3241,20 @@ sub {
 .Team_A>.EquipValue>.Upper_Container>.txt {
     position: absolute;
     left: 0px;
-    top: 4px;
+    top: 1px;
     width: 105px;
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 16px;
-    font-family: 'HelveticaNowText';
+    font-size: 20px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
     letter-spacing: 2;
-    line-height: 1.1;
+    line-height: 1;
     text-align: center;
 }
 
@@ -3337,21 +3337,21 @@ sub {
 
 .Team_B>.TeamMoney>.Upper_Container>.txt {
     position: absolute;
-    right: 0px;
-    top: 4px;
+    left: 0px;
+    top: 1px;
     width: 105px;
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 16px;
-    font-family: 'HelveticaNowText';
+    font-size: 20px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1.1;
+    letter-spacing: 3;
+    line-height: 1;
     text-align: center;
 }
 
@@ -3407,21 +3407,21 @@ sub {
 
 .Team_B>.EquipValue>.Upper_Container>.txt {
     position: absolute;
-    right: 0px;
-    top: 4px;
+    left: 0px;
+    top: 1px;
     width: 105px;
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 16px;
-    font-family: 'HelveticaNowText';
+    font-size: 20px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
     letter-spacing: 2;
-    line-height: 1.1;
+    line-height: 1;
     text-align: center;
 }
 
@@ -3486,22 +3486,21 @@ sub {
 
 .LossBonus_A>.Upper_Container>.txt {
     position: absolute;
-    right: 0px;
-    top: 5px;
+    left: 0px;
+    top: 2px;
     width: 95px;
-    height: 40px;
+    height: 45px;
     z-index: 208;
-    overflow: hidden;
     /* opacity: 0.3; */
-    font-size: 17px;
-    font-family: 'HelveticaNowText';
+    font-size: 23px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1.2;
+    letter-spacing: 3;
+    line-height: 1;
     text-align: center;
 }
 
@@ -3627,21 +3626,20 @@ sub {
 .LossBonus_B>.Upper_Container>.txt {
     position: absolute;
     left: 0px;
-    top: 5px;
+    top: 2px;
     width: 95px;
-    height: 40px;
+    height: 45px;
     z-index: 208;
-    overflow: hidden;
     /* opacity: 0.3; */
-    font-size: 17px;
-    font-family: 'HelveticaNowText';
+    font-size: 23px;
+    font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1.2;
+    letter-spacing: 3;
+    line-height: 1;
     text-align: center;
 }
 

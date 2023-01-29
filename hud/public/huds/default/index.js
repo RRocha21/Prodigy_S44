@@ -32,10 +32,10 @@ var bo = 3;
 var flag_replays = 1;
 
 // var t_color = "245, 158, 45";
-var ct_color = "0,187,199";
-var dark_ct_color = "52,110,161";
-var t_color = "234,73,73";
-var dark_t_color = "183,33,33";
+var ct_color = "65, 124, 192";
+var dark_ct_color = "65, 124, 192";
+var t_color = "229, 57, 67";
+var dark_t_color = "229, 57, 67";
 
 //var t_color = "254, 160, 47";
 //var ct_color = "0, 172, 230";
