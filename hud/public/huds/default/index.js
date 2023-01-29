@@ -78,7 +78,7 @@ $(document).ready(
 $(document).ready(
     function() {
         setInterval(function() {
-            if (numtext2 >= 5) {
+            if (numtext2 >= 4) {
                 numtext2 = 0;
             } else {
                 numtext2 = numtext2 + 1;

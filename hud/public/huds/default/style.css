@@ -2069,7 +2069,7 @@ sub {
     width: 90px;
     height: 10px;
     left: 3px;
-    bottom: -62px;
+    bottom: -54px;
     background: rgb(236,236,236);
     z-index: 440;
 }
@@ -2080,7 +2080,7 @@ sub {
     height: 20px;
     left: 35px;
     transform: rotate(45deg);
-    bottom: -67px;
+    bottom: -59px;
     background: rgb(236,236,236);
     z-index: 440;
     -webkit-transform: rotate(45deg);
@@ -2633,7 +2633,7 @@ sub {
     width: 90px;
     height: 10px;
     left: 3px;
-    bottom: -62px;
+    bottom: -54px;
     background: rgb(236,236,236);
     z-index: 440;
 }
@@ -2644,7 +2644,7 @@ sub {
     height: 20px;
     left: 35px;
     transform: rotate(45deg);
-    bottom: -67px;
+    bottom: -59px;
     background: rgb(236,236,236);
     z-index: 440;
     -webkit-transform: rotate(45deg);
@@ -3176,15 +3176,15 @@ sub {
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 3;
-    line-height: 1;
+    letter-spacing: 1.8;
+    line-height: 1.8;
     text-align: center;
 }
 
@@ -3240,21 +3240,21 @@ sub {
 
 .Team_A>.EquipValue>.Upper_Container>.txt {
     position: absolute;
-    left: 0px;
+    right: -1px;
     top: 1px;
     width: 105px;
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1;
+    letter-spacing: 1.8;
+    line-height: 1.8;
     text-align: center;
 }
 
@@ -3343,15 +3343,15 @@ sub {
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 3;
-    line-height: 1;
+    letter-spacing: 1.8;
+    line-height: 1.8;
     text-align: center;
 }
 
@@ -3407,21 +3407,21 @@ sub {
 
 .Team_B>.EquipValue>.Upper_Container>.txt {
     position: absolute;
-    left: 0px;
+    right: -1px;
     top: 1px;
     width: 105px;
     height: 45px;
     z-index: 208;
     /* opacity: 0.3; */
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
     color: rgb(236,236,236);
     text-transform: uppercase;
     /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1;
+    letter-spacing: 1.8;
+    line-height: 1.8;
     text-align: center;
 }
 
