@@ -19,7 +19,7 @@ html
     section 
      .sponsor
       .inner
-     .bigger_sponsor 
+     //.bigger_sponsor 
       .inner
       //.other_sponsor 
         .inner
@@ -117,24 +117,6 @@ html
               .Result
             .Round_n15
               .Result 
-     //.right_bonus
-        .box
-        .bonus_text 
-          .real_text
-        .bonus_box_1
-        .bonus_box_2
-        .bonus_box_3
-        .bonus_box_4
-        .bonus_amount
-     //.left_bonus
-        .box
-        .bonus_text 
-          .real_text
-        .bonus_box_1
-        .bonus_box_2
-        .bonus_box_3
-        .bonus_box_4
-        .bonus_amount
      .win_container
       .chicken
       .bg_container
@@ -148,7 +130,8 @@ html
           //- img(src='../../sponsors/rtp_logo.png')
       .topbar_i_counter
         .separator
-        .line
+        .line1 
+        .line2
         .title PLAYERS ALIVE
         .player_count_right
           .right_count 
@@ -211,22 +194,6 @@ html
         .text WINS THE ROUND!
       .win_text_right 
         .text WINS THE ROUND!
-      //.team_money_left 
-        .top_text 
-          .text MONEY
-        .bottom_text
-      //.team_equip_left 
-        .top_text 
-          .text EQUIPMENT
-        .bottom_text
-      //.team_money_right
-        .top_text 
-          .text MONEY
-        .bottom_text
-      //.team_equip_right 
-        .top_text 
-          .text EQUIPMENT
-        .bottom_text
     .Progress_Bar
       .Left_Team 
         .Background
@@ -238,56 +205,30 @@ html
         .Player_Txt NICOODOZ
         .Center_Txt PLANTING THE BOMB
     .Team_A
-      .LossBonus 
-        .Upper_Container 
-          .txt LOSS BONUS
-        .Lower_Container 
-          .txt $1960
       .EquipValue 
         .Upper_Container 
           .txt Equip Value
         .Lower_Container 
           .txt $1960
-      .bonus_boxes
-        .bonus_box_1 
-        .bonus_box_2 
-        .bonus_box_3 
-        .bonus_box_4
       .TeamMoney 
         .Upper_Container 
           .txt Team Money
         .Lower_Container 
           .txt $1960
       .separator1 
-      .separator2
     .Team_B
-      .LossBonus 
-        .Upper_Container 
-          .txt LOSS BONUS
-        .Lower_Container 
-          .txt $1960
       .EquipValue 
         .Upper_Container 
           .txt Equip Value
         .Lower_Container 
           .txt $1960
-      .bonus_boxes
-        .bonus_box_1 
-        .bonus_box_2 
-        .bonus_box_3 
-        .bonus_box_4
       .TeamMoney 
         .Upper_Container 
           .txt Team Money
         .Lower_Container 
           .txt $1960
       .separator1 
-      .separator2
     .Spam_A   
-      .Spam_SM
-        .Text_Box 
-          .Text UTILITY
-        .separator
       .Spam_BG
         .Top_Spam
         .Progress
@@ -305,10 +246,6 @@ html
             .Inc_Icon
             .Inc_Txt  x10
     .Spam_B  
-      .Spam_SM
-        .Text_Box 
-          .Text UTILITY
-        .separator 
       .Spam_BG
         .Top_Spam
         .Progress
@@ -325,6 +262,26 @@ html
           .Inc
             .Inc_Icon
             .Inc_Txt  x10   
+    .LossBonus_A 
+      .Upper_Container
+        .txt Loss Bonus
+      .Lower_Container
+        .txt $1960
+      .bonus_boxes 
+        .bonus_box_1
+        .bonus_box_2
+        .bonus_box_3
+        .bonus_box_4
+    .LossBonus_B
+      .Upper_Container
+        .txt Loss Bonus
+      .Lower_Container
+        .txt $1960
+      .bonus_boxes 
+        .bonus_box_1
+        .bonus_box_2
+        .bonus_box_3
+        .bonus_box_4
     .observed_container
       .photo_container
         .photo_player 
@@ -345,6 +302,8 @@ html
         .ammo_txt 100
     .players_left_container 
       #player1(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -379,6 +338,8 @@ html
         .grenades
         .weapon_icon
       #player2(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .armor_background
        .helmet
@@ -413,6 +374,8 @@ html
         .grenades
         .weapon_icon
       #player3(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .armor_background
        .helmet
@@ -447,6 +410,8 @@ html
         .grenades
         .weapon_icon
       #player4(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -481,6 +446,8 @@ html
         .grenades
         .weapon_icon
       #player5(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -516,6 +483,8 @@ html
         .weapon_icon
     .players_right_container 
       #player1(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -550,6 +519,8 @@ html
         .grenades
         .weapon_icon
       #player2(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -584,6 +555,8 @@ html
         .grenades
         .weapon_icon
       #player3(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -618,6 +591,8 @@ html
         .grenades
         .weapon_icon
       #player4(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
@@ -652,6 +627,8 @@ html
         .grenades
         .weapon_icon
       #player5(class="player_container")
+       .arrow
+       .arrow_2
        .background
        .photo_container
         .photo_player 
