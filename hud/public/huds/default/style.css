@@ -843,9 +843,9 @@ sub {
     border-color: #fff;
     border-style: solid;
     left: 6px;
-    top: 25px;
+    top: 20px;
     width: 11px;
-    height: 31px;
+    height: 43px;
     z-index: 58;
     box-sizing: border-box;
 }
@@ -890,9 +890,9 @@ sub {
     border-color: #fff;
     border-style: solid;
     right: 6px;
-    top: 25px;
+    top: 20px;
     width: 11px;
-    height: 31px;
+    height: 43px;
     z-index: 58;
     box-sizing: border-box;
 }
@@ -1460,8 +1460,8 @@ sub {
 .header_container>.bomb_countdown_container {
     position: absolute;
     width: 147px;
-    height: 66px;
-    bottom: -10px;
+    height: 86px;
+    bottom: -30px;
     left: 412px;
     z-index: 70;
     opacity: 0;
@@ -1470,18 +1470,18 @@ sub {
 .header_container>.bomb_countdown_container>.background {
     position: absolute;
     width: 147px;
-    height: 66px;
+    height: 86px;
     bottom: 0px;
     left: 0px;
     z-index: 70;
-    background: linear-gradient( 0deg, rgba(183,0,0,1) 0%, rgba(224,83,83,1) 100%);
+    background: linear-gradient( 0deg, rgba(224,83,83,1) 0%, rgba(224,83,83,1) 100%);
 }
 
 .header_container>.bomb_countdown_container>.bomb {
     position: absolute;
     width: 147px;
     height: 76px;
-    bottom: -13px;
+    bottom: 5px;
     left: 0px;
     z-index: 70;
     background-image: url(../../files/img/bomb_Img.png);
@@ -1705,23 +1705,22 @@ sub {
 }
 
 .observed_container>#nades {
+    display: flex;
+    justify-content: right;
+    align-items: right;
     z-index: 60;
     position: absolute;
     width: 140px;
     height: 21px;
-    left: 358px;
+    left: 353px;
     top: 11px;
-    float: left;
-    justify-content: flex-end;
-    display: inline-flex;
+    
 }
 
 .observed_container>#nades img {
-    height: 21px;
-    max-height: 21px;
-    width: auto;
+    max-width: 100%;
+    max-height: 100%;
     margin-right: 6px;
-    display: inline-flex;
 }
 
 .observed_container>.armor {
@@ -2321,7 +2320,7 @@ sub {
     width: 20px;
     background:rgb(236, 236, 236);
     overflow: hidden;
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 
 .flex_lower_left>.armor_background>.armor {
@@ -2367,7 +2366,7 @@ sub {
 }
 
 .flex_lower_left>.health_icon {
-    margin-left: 0px;
+    /* margin-left: 0px; */
     height: 19px;
     width: 19px;
     background-image: url(../../../files/img/hp.png);
@@ -2444,17 +2443,18 @@ sub {
 
 .players_left_container>.player_container>.bottom_bar>.grenades {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 8px;
     left: 18px;
     height: 15px;
     width: 70px;
-    align-items: center;
-    justify-content: center;
     /* align-content: center; */
 }
 
 .players_left_container>.player_container>.bottom_bar>.grenades img {
-    max-width: 100%;
+    max-size: 100%;
     max-height: 100%;
     margin-right: 6px;
 }
@@ -2507,70 +2507,6 @@ sub {
     background-color: rgba(47,47,47);
 }
 
-
-.players_left_container>.player_container>.bottom_bar>.k_icon {
-    background-image: url(../../files/img/kills.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    left: 5px;
-    top: 34px;
-    z-index: 283;
-    height: 16px;
-    width: 16px;
-}
-
-.players_left_container>.player_container>.bottom_bar>.d_icon {
-    background-image: url(../../files/img/deaths.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    top: 33px;
-    left: 50px;
-    z-index: 283;
-    height: 17px;
-    width: 16px;
-}
-
-.players_left_container>.player_container>.bottom_bar>.k {
-    font-size: 19px;
-    font-family: 'Bebas Neue Pro';
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236,236,236);
-    text-transform: uppercase;
-    /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1;
-    text-align: left;
-    position: absolute;
-    left: 26px;
-    top: 32px;
-    z-index: 283;
-    height: 25px;
-    width: 20px;
-}
-
-.players_left_container>.player_container>.bottom_bar>.d {
-    font-size: 19px;
-    font-family: 'Bebas Neue Pro';
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236,236,236);
-    text-transform: uppercase;
-    /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1;
-    text-align: left;
-    position: absolute;
-    top: 32px;
-    left: 72px;
-    z-index: 283;
-    height: 25px;
-    width: 20px;
-}
 
 
 /** RIGHT SIDE **/
@@ -2922,6 +2858,7 @@ sub {
 }
 
 .flex_lower_right>.armor_background {
+    margin-right: 0px;
     height: 19px;
     width: 20px;
     background:rgb(236, 236, 236);
@@ -2948,7 +2885,6 @@ sub {
     width: 20px;
     background:rgb(236, 236, 236);
     overflow: hidden;
-    margin-right: 5px;
 }
 
 
@@ -2972,7 +2908,7 @@ sub {
 }
 
 .flex_lower_right>.health_icon {
-    /* margin-right: 2px; */
+    margin-right: 2px;
     height: 19px;
     width: 19px;
     background-image: url(../../../files/img/hp.png);
@@ -2982,10 +2918,12 @@ sub {
 }
 
 .flex_lower_right>.health_text {
-    margin-right: 8px;
+    margin-right: 5px;
     font-size: 19px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
+
+
     font-style: normal;
     color: rgb(236, 236, 236);
     /* font-weight: 900; */
@@ -3053,12 +2991,13 @@ sub {
   
   .players_right_container>.player_container>.bottom_bar>.grenades {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 8px;
     left: 18px;
     height: 15px;
     width: 70px;
-    align-items: center;
-    justify-content: center;
     /* align-content: center; */
   }
   
@@ -3184,7 +3123,7 @@ sub {
     background-size: contain;
     height: 17px;
     width: 16px;
-    margin-left: 3px;
+    /* margin-left: 3px; */
   }
   
   .flex_kd>.d_icon {

@@ -1705,23 +1705,22 @@ sub {
 }
 
 .observed_container>#nades {
+    display: flex;
+    justify-content: right;
+    align-items: right;
     z-index: 60;
     position: absolute;
     width: 140px;
     height: 21px;
-    left: 358px;
+    left: 353px;
     top: 11px;
-    float: left;
-    justify-content: flex-end;
-    display: inline-flex;
+    
 }
 
 .observed_container>#nades img {
-    height: 21px;
-    max-height: 21px;
-    width: auto;
+    max-width: 100%;
+    max-height: 100%;
     margin-right: 6px;
-    display: inline-flex;
 }
 
 .observed_container>.armor {
@@ -2363,11 +2362,20 @@ sub {
     width: 14px;
 }
 
-.players_left_container>.player_container>.health_icon {
+.flex_lower_left {
     position: absolute;
-    right: 23px;
-    top: 181px;
-    z-index: 282;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    bottom: 19px;
+    z-index: 290;
+    height: 19px;
+    width: 96px;
+}
+
+.flex_lower_left>.health_icon {
+    /* margin-left: 0px; */
     height: 19px;
     width: 19px;
     background-image: url(../../../files/img/hp.png);
@@ -2376,7 +2384,8 @@ sub {
     background-size: contain;
 }
 
-.players_left_container>.player_container>.health_text {
+.flex_lower_left>.health_text {
+    /* margin-right: 5px; */
     font-size: 19px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
@@ -2385,13 +2394,7 @@ sub {
     /* font-weight: 900; */
     text-transform: uppercase;
     line-height: 1.4;
-    text-align: right;
-    position: absolute;
-    left: 15px;
-    top: 177px;
-    z-index: 283;
-    height: 27px;
-    width: 38px;
+    text-align: center;
     letter-spacing: 3;
 }
 
@@ -2491,34 +2494,32 @@ sub {
     background-color: rgba(47,47,47);
 }
 
+.flex_kd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 56px;
+    z-index: 293;
+    height: 16px;
+    width: 96px;
+    /* box-sizing: border-box; */
+    /*border: 2px solid blue;
+    */transition: all 0.5s ease 0s;
+  }
 
-.players_left_container>.player_container>.bottom_bar>.k_icon {
+.flex_kd>.k_icon {
     background-image: url(../../files/img/kills.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    position: absolute;
-    left: 30px;
-    top: 54px;
-    z-index: 283;
     height: 18px;
     width: 18px;
-}
-
-.players_left_container>.player_container>.bottom_bar>.d_icon {
-    background-image: url(../../files/img/deaths.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    position: absolute;
-    top: 53px;
-    left: 70px;
-    z-index: 283;
-    height: 17px;
-    width: 16px;
-}
-
-.players_left_container>.player_container>.bottom_bar>.k {
+    /* margin-left: 3px; */
+  }
+  
+  .flex_kd>.k {
     font-size: 23px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
@@ -2527,92 +2528,16 @@ sub {
     text-transform: uppercase;
     /* font-weight: 600; */
     letter-spacing: 2;
-    line-height: 1;
-    text-align: left;
-    position: absolute;
-    left: 55px;
-    top: 52px;
-    z-index: 283;
-    height: 25px;
-    width: 20px;
-}
-
-.players_left_container>.player_container>.bottom_bar>.d {
-    font-size: 19px;
-    font-family: 'Bebas Neue Pro';
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236,236,236);
-    text-transform: uppercase;
-    /* font-weight: 600; */
-    letter-spacing: 2;
-    line-height: 1;
-    text-align: left;
-    position: absolute;
-    top: 32px;
-    left: 72px;
-    z-index: 283;
-    height: 25px;
-    width: 20px;
-}
+    /* line-height: 1; */
+    text-align: center;
+    /* margin-bottom: 2px; */
+    margin-left: 5px;
+  }
+  
 
 
 /** RIGHT SIDE **/
-
-.players_right_container>.player_container>.Round_Kills {
-    z-index: 211;
-    position: absolute;
-    width: 16px;
-    height: 38px;
-    left: -5px;
-    top: -5px;
-    transform: all 0.5s ease 0.0s;
-    overflow: hidden;
-    -webkit-transform: all 0.5s ease 0.0s;
-    -moz-transform: all 0.5s ease 0.0s;
-    -ms-transform: all 0.5s ease 0.0s;
-    -o-transform: all 0.5s ease 0.0s;
-  }
   
-  .players_right_container>.player_container>.Round_Kills>.background2 {
-    background-color: rgb(47, 47, 47);
-    position: absolute;
-    width: 16px;
-    height: 38px;
-    right: 0px;
-    top: 0px;
-  }
-  
-  .players_right_container>.player_container>.Round_Kills>.icon {
-    background-image: url(../../files/img/kills.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    /* filter: invert(1); */
-    position: absolute;
-    height: 14px;
-    width: 14px;
-    left: 1px;
-    top: 3px;
-  }
-  
-  .players_right_container>.player_container>.Round_Kills>.frags {
-    font-size: 19px;
-    text-transform: uppercase;
-    font-family: 'Bebas Neue Pro';
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236,236,236);
-    font-weight: 700;
-    line-height: 2.9;
-    letter-spacing: 1;
-    text-align: center;
-    position: absolute;
-    height: 38px;
-    width: 16px;
-    right: 0px;
-    bottom: 0px;
-  }
   
   /** LEFT SIDE **/
   
@@ -2784,23 +2709,6 @@ sub {
     -o-transition: all 0.4s ease-in-out 0s;
   }
   
-  /* .players_left_container>.player_container>.flash_2 {
-    width: 74px;
-    height: 74px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 220;
-    transition: all 0.4s ease-in-out 0s;
-    background: rgba(255, 255, 255, 0);
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    -ms-transition: all 0.4s ease-in-out 0s;
-    -o-transition: all 0.4s ease-in-out 0s;
-  } */
-  
-  
-  /* LEFT SIDE - TOP BAR */
   
   .players_right_container>.player_container>.top_bar {
     width: 96px;
@@ -2868,79 +2776,31 @@ sub {
     overflow: hidden;
   }
   
-  .players_right_container>.player_container>.armor {
+  .flex_lower_right {
     position: absolute;
-    right: 6px;
-    bottom: 21px;
-    background-image: url(../../files/img/armor.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    z-index: 281;
-    height: 16px;
-    width: 16px;
-    opacity: 0;
-    filter: invert(1);
-    -webkit-filter: invert(1);
-  }
-  
-  .players_right_container>.player_container>.helmet {
     position: absolute;
-    right: 26px;
-    bottom: 22px;
-    background-image: url(../../files/img/helmet.png);
-    transform: scaleX(-1);
-    filter: invert(1);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    z-index: 281;
-    height: 14px;
-    width: 14px;
-    opacity: 0;
-    -webkit-filter: invert(1);
-    -webkit-transform: scaleX(-1);
-    -moz-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-  }
-  
-  .players_right_container>.player_container>.bomb_defuse_background {
-    background-color: rgb(236, 236, 236);
-    position: absolute;
-    left: 10px;
-    top: 59px;
-    z-index: 280;
-    height: 15px;
-    width: 15px;
-  }
-  
-  
-  .players_right_container>.player_container>.bomb_defuse {
-    /*background-color: rgb(236, 236, 236);
-    */position: absolute;
-    left: 11px;
-    filter: invert(1);
-    top: 61px;
-    z-index: 281;
-    height: 14px;
-    width: 14px;
-  }
-  
-  .players_right_container>.player_container>.health_icon {
-    position: absolute;
-    left: 22px;
-    top: 181px;
-    z-index: 282;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    bottom: 19px;
+    z-index: 290;
+    height: 19px;
+    width: 96px;
+}
+
+.flex_lower_right>.health_icon {
+    margin-right: 0px;
     height: 19px;
     width: 19px;
     background-image: url(../../../files/img/hp.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-  }
-  
-  .players_right_container>.player_container>.health_text {
+}
+
+.flex_lower_right>.health_text {
+    margin-left: 2px;
     font-size: 19px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
@@ -2949,15 +2809,10 @@ sub {
     /* font-weight: 900; */
     text-transform: uppercase;
     line-height: 1.4;
-    text-align: left;
-    position: absolute;
-    right: 15px;
-    top: 177px;
-    z-index: 283;
-    height: 27px;
-    width: 38px;
+    text-align: center;
     letter-spacing: 3;
-  }
+    margin-right: 2px;
+}
   
   .players_right_container>.player_container>.top_bar>.weapon_icon {
     position: absolute;

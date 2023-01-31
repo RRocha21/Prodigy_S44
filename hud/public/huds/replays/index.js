@@ -645,7 +645,14 @@ function fillPlayer(player, nr, side, max) {
     //     $bottom.find(".k").html(statistics.kills);
     // }
 
-    $bottom.find(".k").text(statistics.round_kills);
+    if (statistics.round_kills > 0) {
+        $bottom.find(".flex_kd>.k").text(statistics.round_kills);
+        $bottom.find(".flex_kd>.k").css("display", "block");
+        $bottom.find(".flex_kd>.k_icon").css("display", "block");
+    } else {
+        $bottom.find(".flex_kd>.k").css("display", "none");
+        $bottom.find(".flex_kd>.k_icon").css("display", "none");
+    }
 
 
     //OBSERVED

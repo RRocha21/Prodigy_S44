@@ -1296,10 +1296,10 @@ function updatePage(data) {
 
     if ((matchup && matchup.toLowerCase() !== "bo3") || !matchup) {
         bo = 1;
-        $(".header_container>.left_series>.bo1").css("opacity", "0");
+        $(".header_container>.left_series>.bo1").css("opacity", "1");
         $(".header_container>.left_series>.bo3_map1").css("opacity", "0");
         $(".header_container>.left_series>.bo3_map2").css("opacity", "0");
-        $(".header_container>.right_series>.bo1").css("opacity", "0");
+        $(".header_container>.right_series>.bo1").css("opacity", "1");
         $(".header_container>.right_series>.bo3_map1").css("opacity", "0");
         $(".header_container>.right_series>.bo3_map2").css("opacity", "0");
         var map3_let = data.map();
