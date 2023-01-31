@@ -843,9 +843,9 @@ sub {
     border-color: #fff;
     border-style: solid;
     left: 6px;
-    top: 25px;
+    top: 20px;
     width: 11px;
-    height: 31px;
+    height: 43px;
     z-index: 58;
     box-sizing: border-box;
 }
@@ -890,9 +890,9 @@ sub {
     border-color: #fff;
     border-style: solid;
     right: 6px;
-    top: 25px;
+    top: 20px;
     width: 11px;
-    height: 31px;
+    height: 43px;
     z-index: 58;
     box-sizing: border-box;
 }
