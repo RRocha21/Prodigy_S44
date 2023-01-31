@@ -1,9 +1,0 @@
-VertexLitGeneric
-{
-	"$baseTexture" 		"customstuff/ancient/aztec_signs_01_color"
-	"$bumpmap" 			"customstuff/ancient/aztec_signs_01_normal"
-	
-	"$surfaceprop" 			"Wood_Panel"
-                                                          
-	"%keywords" "wood,aztec" 	
-}

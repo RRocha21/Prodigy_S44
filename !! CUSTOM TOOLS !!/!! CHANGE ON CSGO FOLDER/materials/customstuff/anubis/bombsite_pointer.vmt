@@ -1,5 +1,0 @@
-"VertexLitGeneric"
-{
-	$baseTexture 		"customstuff/anubis/bombsite_pointer"
-	"$surfaceprop" 		"metal"
-}

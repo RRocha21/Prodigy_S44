@@ -311,28 +311,28 @@ CSGOHudReticle Label .InlineGlyph
                
 .playerid--team-ct .playerid__icon--arrow
 {
-	wash-color-fast: #FF55E1AA;
+	wash-color-fast: #417cc0;
 	                                    
 }
 
                       
 .playerid--team-t .playerid__icon--arrow
 {
-	wash-color-fast: #FFB400AA;
+	wash-color-fast: #e53943;
 }
 
                
 .playerid--team-ct .playerid__icon--arrowborder
 {
     -s2-mix-blend-mode: normal;
-	wash-color-fast: #FF55E1AA;
+	wash-color-fast: #417cc0;
 }
 
                       
 .playerid--team-t .playerid__icon--arrowborder
 {
     -s2-mix-blend-mode: normal;
-	wash-color-fast: #FFB400AA;
+	wash-color-fast: #e53943;
 }
 
                      

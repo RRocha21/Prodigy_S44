@@ -1,9 +1,9 @@
                                                 
 
                                                                   
-@define CTColor: #FF55E1;
-@define TColor: #FFB400;
-@define FadedColor: #000000;
+@define CTColor: #417cc0;
+@define TColor: #e53943;
+@define FadedColor: #2f2f2f;
 
                             
 @define DeathNoticeLifetime: 5.0;				                                       
@@ -85,7 +85,7 @@ CSGOHudDeathNotice Label
 	width: 100%;
 	height: 100%;
 	border-radius: 0px 0px 0px 0px;                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-	background-color: black;
+	background-color: #2f2f2fd9;
 	opacity: 1;
 }
 
@@ -128,7 +128,7 @@ CSGOHudDeathNotice Label
 .DeathNotice_Killer .DeathNoticeBG
 {
 	visibility: visible;
-	background-color: black;
+	background-color: #2f2f2fd9;
 	opacity: 0.65;
 }
 
@@ -156,11 +156,12 @@ CSGOHudDeathNotice Label
 	margin-bottom: 2px;
 	letter-spacing: 0.5px;
 	text-shadow-fast: 1px 1px #000000;
-	line-height: 22;
-	max-height: 30px;
+	line-height: 23;
+	max-height: 26px;
 	max-width: 300px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	text-transform: uppercase;
 }
 
 .DeathNoticeCTColor
@@ -180,7 +181,7 @@ CSGOHudDeathNotice Label
 
 .DeathNoticeIcon
 {
-	height: 24px;
+	height: 20px;
 	vertical-align: middle;
 	visibility: collapse;
 	margin: -2px 2px 0px 2px;

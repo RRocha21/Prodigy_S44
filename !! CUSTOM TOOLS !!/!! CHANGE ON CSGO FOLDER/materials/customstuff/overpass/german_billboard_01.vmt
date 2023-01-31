@@ -1,9 +1,0 @@
-"LightMappedGeneric"
-{
-	"$baseTexture" "customstuff/overpass/german_billboard_01"
-
-	"$alphatest" "1"
-	"$decal" "1"
-
-
-}
