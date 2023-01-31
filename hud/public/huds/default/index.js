@@ -724,7 +724,7 @@ function fillPlayer(player, nr, side, max) {
     if (player.observer_slot <= 5) {
 
         player_name = player.name;
-        if (player_name.length > 8) player_name = player_name.substring(0, 8);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $player.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -732,7 +732,7 @@ function fillPlayer(player, nr, side, max) {
         $top.find(".health_bar").css("height", statistics.health + "%");
         $top.find(".health_red").css("height", statistics.health + "%");
         $player.find(".health_shade").css("height", statistics.health + "%");
-        if (statistics.health < 35) {
+        if (statistics.health < 40) {
             $player.find(".health_shade").css("opacity", "0.8");
         } else if (statistics.health == 0 ) {
             $player.find(".health_shade").css("opacity", "0");
@@ -742,12 +742,11 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".player_bar_shadow").css("height", statistics.health + "%");
 
         if (statistics.health == 0) {
-            var flash_amount = 0;
+            var flash_amount = 1;
         } else {
-            var flash_amount = (statistics.flashed * 0.9 / 255);
+            var flash_amount = (statistics.flashed * 20 / 255) + 1;
         }
-        $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
-        $player.find(".flash_2").css("background", "rgba(255,255,255," + flash_amount + ")");
+        $player.find(".photo_container>.photo_player img").css("filter",  "brightness("+flash_amount+")" );
 
         l_team_value = l_team_value + statistics.money;
 
@@ -770,7 +769,7 @@ function fillPlayer(player, nr, side, max) {
 
     } else if (player.observer_slot < 10) {
         player_name = player.name;
-        if (player_name.length > 8) player_name = player_name.substring(0, 8);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $player.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -786,12 +785,11 @@ function fillPlayer(player, nr, side, max) {
             $player.find(".health_shade").css("opacity", "0");
         }
         if (statistics.health == 0) {
-            var flash_amount = 0;
+            var flash_amount = 1;
         } else {
-            var flash_amount = (statistics.flashed * 0.9 / 255);
+            var flash_amount = (statistics.flashed * 20 / 255) + 1;
         }
-        $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
-        $player.find(".flash_2").css("background", "rgba(255,255,255," + flash_amount + ")");
+        $player.find(".photo_container>.photo_player img").css("filter",  "brightness("+flash_amount+")" );
 
         if (statistics.health == 0) {
             gradient = "linear-gradient(to " + side + ", rgb(25,25,25)" + (100 - statistics.health) + "%, " + health_color + " " + (100 - statistics.health) + "%)";
@@ -815,7 +813,7 @@ function fillPlayer(player, nr, side, max) {
     } else if (player.observer_slot == 10) {
 
         player_name = player.name;
-        if (player_name.length > 8) player_name = player_name.substring(0, 8);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $player.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html("0");
@@ -831,12 +829,11 @@ function fillPlayer(player, nr, side, max) {
             $player.find(".health_shade").css("opacity", "0");
         }
         if (statistics.health == 0) {
-            var flash_amount = 0;
+            var flash_amount = 1;
         } else {
-            var flash_amount = (statistics.flashed * 0.9 / 255);
+            var flash_amount = (statistics.flashed * 20 / 255) + 1;
         }
-        $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
-        $player.find(".flash_2").css("background", "rgba(255,255,255," + flash_amount + ")");
+        $player.find(".photo_container>.photo_player img").css("filter",  "brightness("+flash_amount+")" );
 
         if (statistics.health == 0) {
             gradient = "linear-gradient(to " + side + ", rgb(25,25,25)" + (100 - statistics.health) + "%, " + health_color + " " + (100 - statistics.health) + "%)";
@@ -878,6 +875,7 @@ function fillPlayer(player, nr, side, max) {
     }
 
     if (statistics.health !== 0) {
+        $player.find(".flex_money_bomb>.money").css("display", "block");
         if (team == "ct") {
             if (statistics.defusekit) {
                 $player.find(".flex_money_bomb>.defuse").css("display", "block");
@@ -1583,13 +1581,14 @@ function updatePage(data) {
     var total = total_rounds + 1;
 
 
-    var videos_txt = ["../../sponsors/1.mp4", "../../sponsors/2.mp4", "../../sponsors/3.mp4", "../../sponsors/4.mp4"];
+    var videos_txt = ["../../sponsors/1.webm", "../../sponsors/2.webm", "../../sponsors/3.webm", "../../sponsors/4.webm"];
 
     console.log(videos_txt.length);
     
 
     console.log(total_rounds%3 == 2);
 
+    
 
     if (observed.steamid == 1 || !observed) {
         if (((phase.phase == "freezetime") && (total_rounds%3 == 2)) || (phase.phase == "paused" || phase.phase == "timeout_ct" || phase.phase == "timeout_t")) {
@@ -1605,7 +1604,7 @@ function updatePage(data) {
                 if (bigger_sponsor_counter >= 4) {
                     bigger_sponsor_counter = 0;
                 }
-                $(".bigger_sponsor>.inner").html("<video  width=560px autoplay muted><source src="+ videos_txt[bigger_sponsor_counter] +" type='video'></video>");
+                $(".bigger_sponsor>.inner").html("<video  width=560px autoplay muted><source src="+ videos_txt[bigger_sponsor_counter] +" type='video/webm'></video>");
             }
         } else {
             $(".observed_container").css("transition", "all 0.3s ease 0s").css("transform", "translateY(80px)");
@@ -2252,14 +2251,18 @@ function updatePage(data) {
                 if (data.info.bomb.countdown < 9.70) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
-                        $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
+                        var defuse_name = name;
+                        if (defuse_name.length > 13) defuse_name = defuse_name.substring(0, 13);
+                        $(".Progress_Bar>.Center_Bar>.Player_Txt").html(defuse_name);
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                         $(".Progress_Bar>.Center_Bar").css("background-image" , "url(../../files/img/DefuseKit_Img.png");
                         $(".Progress_Bar>.Center_Bar").css("opacity", "1").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Left_Team").css("opacity", "1").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Left_Team>.Progress").css("width", progress_width).css("transition", "all 0.4s ease 0s");
                     } else {
-                        $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
+                        var defuse_name = name;
+                        if (defuse_name.length > 13) defuse_name = defuse_name.substring(0, 13);
+                        $(".Progress_Bar>.Center_Bar>.Player_Txt").html(defuse_name);
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                         $(".Progress_Bar>.Center_Bar").css("background-image" , "url(../../files/img/DefuseKit_Img.png");
                         $(".Progress_Bar>.Center_Bar").css("opacity", "1").css("transition", "opacity 0.5s ease 0s");
@@ -2338,7 +2341,9 @@ function updatePage(data) {
                     $(".Progress_Bar>.Center_Bar").css("background-image" , "url(../../files/img/bomb_Img.png");
                     $(".header_container>.bomb_countdown_container>.background").css("height", "66px");
                     $(".header_container>.bomb_countdown_container>.background").css("height", "100%");
-                    $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
+                    var plant_name = name;
+                    if (plant_name.length > 13) plant_name = plant_name.substring(0, 13);
+                    $(".Progress_Bar>.Center_Bar>.Player_Txt").html(plant_name);
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("PLANTING BOMB");
                     $(".Progress_Bar>.Left_Team").css("opacity", "1").css("transition", "opacity 0.4s ease 0s");
                     $(".Progress_Bar>.Center_Bar").css("opacity", "1").css("transition", "opacity 0.4s ease 0.1s");
@@ -2348,7 +2353,9 @@ function updatePage(data) {
                     $(".Progress_Bar>.Center_Bar").css("background-image" , "url(../../files/img/bomb_Img.png");
                     $(".header_container>.bomb_countdown_container>.background").css("height", "66px");
                     $(".header_container>.bomb_countdown_container>.background").css("height", "100%");
-                    $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
+                    var plant_name = name;
+                    if (plant_name.length > 13) plant_name = plant_name.substring(0, 13);
+                    $(".Progress_Bar>.Center_Bar>.Player_Txt").html(plant_name);
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("PLANTING BOMB");
                     $(".Progress_Bar>.Right_Team").css("opacity", "1").css("transition", "opacity 0.4s ease 0s");
                     $(".Progress_Bar>.Center_Bar").css("opacity", "1").css("transition", "opacity 0.4s ease 0.1s");
