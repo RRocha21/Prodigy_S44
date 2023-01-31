@@ -2174,6 +2174,21 @@ sub {
     background: linear-gradient(0deg, rgba(47,47,47,0.9) 0%,rgba(47,47,47,0.9)65%, rgba(47,47,47,0) 100%);
 }
 
+.players_left_container>.player_container>.photo_container>.health_shade {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 96px;
+    height: 220px;
+    opacity: 0;
+    z-index: 215;
+    transition: all 0.5s ease 0.0s;
+    -webkit-transition: all 0.5s ease 0.0s;
+    -moz-transition: all 0.5s ease 0.0s;
+    -ms-transition: all 0.5s ease 0.0s;
+    -o-transition: all 0.5s ease 0.0s;
+}
+
 
 .players_left_container>.player_container>.separator {
     width: 3px;
@@ -2220,27 +2235,12 @@ sub {
     -o-transition: all 0.4s ease-in-out 0s;
 }
 
-/* .players_left_container>.player_container>.flash_2 {
-    width: 74px;
-    height: 74px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 220;
-    transition: all 0.4s ease-in-out 0s;
-    background: rgba(255, 255, 255, 0);
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    -ms-transition: all 0.4s ease-in-out 0s;
-    -o-transition: all 0.4s ease-in-out 0s;
-} */
-
 
 /* LEFT SIDE - TOP BAR */
 
 .players_left_container>.player_container>.top_bar {
     width: 96px;
-    height: 170px;
+    height: 220px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -2249,30 +2249,40 @@ sub {
 
 .players_left_container>.player_container>.top_bar>.health_bar {
     width: 96px;
-    height: 170px;
+    height: 220px;
     position: absolute;
     left: 0px;
     bottom: 0px;
     z-index: 61;
-    transition: width 0.4s ease-in-out 0s;
-    -webkit-transition: height 0.4s ease-in-out 0s;
-    -moz-transition: height 0.4s ease-in-out 0s;
-    -ms-transition: height 0.4s ease-in-out 0s;
-    -o-transition: height 0.4s ease-in-out 0s;
-    /* clip-path: polygon(10% 0, 90% 0, 100% 5%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 5%); */
+    transition: height 0.5s ease 0s;
+    -webkit-transition: height 0.5s ease 0s;
+    -moz-transition: height 0.5s ease 0s;
+    -ms-transition: height 0.5s ease 0s;
+    -o-transition: height 0.5s ease 0s;
+    /*clip-path: polygon(10% 0, 90% 0, 100% 5%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 5%);
+    */
 }
 
-.players_left_container>.player_container>.top_bar>.health_bar_bg {
-    /* background: rgba(236, 236, 236, 0.9); */
-    width: 96px;
-    height: 170px;
+
+.players_left_container>.player_container>.top_bar>.health_red {
+    /*background: rgba(236, 236, 236, 0.9);
+    */width: 96px;
+    height: 220px;
     position: absolute;
     left: 0px;
     bottom: 0px;
-    z-index: 62;
+    z-index: 61;
     /*border-top-right-radius: 10px;
-    border-top-left-radius: 10px;*/
+    border-top-left-radius: 10px;
+    */background-color: rgb(180,30,30);
+    transition: height 1.3s ease 1s;
+    -webkit-transition: height 1.3s ease 1s;
+    -moz-transition: height 1.3s ease 1s;
+    -ms-transition: height 1.3s ease 1s;
+    -o-transition: height 1.3s ease 1s;
 }
+
+
 
 .players_left_container>.player_container>.player_name {
     font-size: 14px;
@@ -2293,52 +2303,91 @@ sub {
     overflow: hidden;
 }
 
-.players_left_container>.player_container>.armor_background {
+
+.flex_lower_left {
     position: absolute;
-    left: 5px;
-    bottom: 20px;
-    z-index: 280;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    bottom: 19px;
+    z-index: 290;
     height: 19px;
-    width: 38px;
-    background:rgb(236, 236, 236);
-    overflow: hidden;
+    width: 96px;
 }
 
-.players_left_container>.player_container>.armor {
-    position: absolute;
-    left: 6px;
-    bottom: 21px;
+.flex_lower_left>.armor_background {
+    height: 19px;
+    width: 20px;
+    background:rgb(236, 236, 236);
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.flex_lower_left>.armor_background>.armor {
     background-image: url(../../files/img/armor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    z-index: 281;
-    height: 16px;
-    width: 16px;
-    opacity: 0;
+    position: absolute;
+    margin-left: 1px;
+    margin-top: 1px;
+    height: 17px;
+    width: 17px;
     filter: invert(1);
     -webkit-filter: invert(1);
 }
 
-.players_left_container>.player_container>.helmet {
-    position: absolute;
-    left: 26px;
-    bottom: 22px;
+.flex_lower_left>.helmet_background{
+    height: 19px;
+    width: 20px;
+    background:rgb(236, 236, 236);
+    overflow: hidden;
+    margin-left: 0px;
+}
+
+
+.flex_lower_left>.helmet_background>.helmet {
     background-image: url(../../files/img/helmet.png);
     transform: scaleX(-1);
     filter: invert(1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    z-index: 281;
-    height: 14px;
-    width: 14px;
-    opacity: 0;
+    position: absolute;
+    margin-left: 1px;
+    margin-top: 2px;
+    height: 15px;
+    width: 15px;
     -webkit-filter: invert(1);
     -webkit-transform: scaleX(-1);
     -moz-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     -o-transform: scaleX(-1);
+}
+
+.flex_lower_left>.health_icon {
+    margin-left: 0px;
+    height: 19px;
+    width: 19px;
+    background-image: url(../../../files/img/hp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.flex_lower_left>.health_text {
+    margin-left: 5px;
+    font-size: 19px;
+    font-family: 'Bebas Neue Pro';
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(236, 236, 236);
+    /* font-weight: 900; */
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 3;
 }
 
 .players_left_container>.player_container>.bomb_defuse_background {
@@ -2351,7 +2400,6 @@ sub {
     width: 15px;
 }
 
-
 .players_left_container>.player_container>.bomb_defuse {
     /*background-color: rgb(236, 236, 236);
     */position: absolute;
@@ -2361,38 +2409,6 @@ sub {
     z-index: 281;
     height: 14px;
     width: 14px;
-}
-
-.players_left_container>.player_container>.health_icon {
-    position: absolute;
-    right: 1px;
-    top: 181px;
-    z-index: 282;
-    height: 19px;
-    width: 19px;
-    background-image: url(../../../files/img/hp.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.players_left_container>.player_container>.health_text {
-    font-size: 19px;
-    font-family: 'Bebas Neue Pro';
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236, 236, 236);
-    /* font-weight: 900; */
-    text-transform: uppercase;
-    line-height: 1.4;
-    text-align: right;
-    position: absolute;
-    left: 38px;
-    top: 177px;
-    z-index: 283;
-    height: 27px;
-    width: 38px;
-    letter-spacing: 3;
 }
 
 .players_left_container>.player_container>.top_bar>.weapon_icon {
@@ -2628,6 +2644,7 @@ sub {
     z-index: 440;
     /* rotate: 45deg; */
   }
+
   .players_right_container>.player_container>.arrow {
     position: absolute;
     width: 90px;
@@ -2636,12 +2653,12 @@ sub {
     bottom: -54px;
     background: rgb(236,236,236);
     z-index: 440;
-}
+  }
 
-.players_right_container>.player_container>.arrow_2 {
+ .players_right_container>.player_container>.arrow_2 {
     position: absolute;
     width: 20px;
-    height: 20px;
+    height: 20px;        
     left: 35px;
     transform: rotate(45deg);
     bottom: -59px;
@@ -2651,7 +2668,7 @@ sub {
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-}
+ }
   
   .players_right_container>.player_container>.number {
     width: 18px;
@@ -2737,6 +2754,21 @@ sub {
     z-index: 214;
     background: linear-gradient(0deg, rgba(47,47,47,0.9) 0%,rgba(47,47,47,0.9)65%, rgba(47,47,47,0) 100%);
   }
+
+  .players_right_container>.player_container>.photo_container>.health_shade {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 96px;
+    height: 220px;
+    opacity: 0;
+    z-index: 215;
+    transition: all 0.5s ease 0.0s;
+    -webkit-transition: all 0.5s ease 0.0s;
+    -moz-transition: all 0.5s ease 0.0s;
+    -ms-transition: all 0.5s ease 0.0s;
+    -o-transition: all 0.5s ease 0.0s;
+}
   
   
   .players_right_container>.player_container>.separator {
@@ -2804,7 +2836,7 @@ sub {
   
   .players_right_container>.player_container>.top_bar {
     width: 96px;
-    height: 170px;
+    height: 220px;
     position: absolute;
     right: 0px;
     top: 0px;
@@ -2813,7 +2845,7 @@ sub {
   
   .players_right_container>.player_container>.top_bar>.health_bar {
     width: 96px;
-    height: 170px;
+    height: 220px;
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -2829,7 +2861,7 @@ sub {
   .players_right_container>.player_container>.top_bar>.health_bar_bg {
     /* background: rgba(236, 236, 236, 0.9); */
     width: 96px;
-    height: 170px;
+    height: 220px;
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -2837,6 +2869,25 @@ sub {
     /*border-top-right-radius: 10px;
     border-top-left-radius: 10px;*/
   }
+
+  .players_right_container>.player_container>.top_bar>.health_red {
+    /*background: rgba(236, 236, 236, 0.9);
+    */width: 96px;
+    height: 220px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 61;
+    /*border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    */
+    background-color: rgb(180,30,30);
+    transition: height 1.3s ease 1s;
+    -webkit-transition: height 1.3s ease 1s;
+    -moz-transition: height 1.3s ease 1s;
+    -ms-transition: height 1.3s ease 1s;
+    -o-transition: height 1.3s ease 1s;
+}
   
   .players_right_container>.player_container>.player_name {
     font-size: 14px;
@@ -2856,54 +2907,95 @@ sub {
     width: 96px;
     overflow: hidden;
   }
-  
-  .players_right_container>.player_container>.armor_background {
+
+  .flex_lower_right {
     position: absolute;
-    right: 5px;
-    bottom: 20px;
-    z-index: 280;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    bottom: 19px;
+    z-index: 290;
     height: 19px;
-    width: 38px;
+    width: 96px;
+}
+
+.flex_lower_right>.armor_background {
+    height: 19px;
+    width: 20px;
     background:rgb(236, 236, 236);
     overflow: hidden;
-  }
-  
-  .players_right_container>.player_container>.armor {
-    position: absolute;
-    right: 6px;
-    bottom: 21px;
+    margin-right: 0px;
+}
+
+.flex_lower_right>.armor_background>.armor {
     background-image: url(../../files/img/armor.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    z-index: 281;
-    height: 16px;
-    width: 16px;
-    opacity: 0;
+    position: absolute;
+    margin-right: 1px;
+    margin-top: 1px;
+    height: 17px;
+    width: 17px;
     filter: invert(1);
     -webkit-filter: invert(1);
-  }
-  
-  .players_right_container>.player_container>.helmet {
-    position: absolute;
-    right: 26px;
-    bottom: 22px;
+}
+
+.flex_lower_right>.helmet_background{
+    height: 19px;
+    width: 20px;
+    background:rgb(236, 236, 236);
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+
+.flex_lower_right>.helmet_background>.helmet {
     background-image: url(../../files/img/helmet.png);
     transform: scaleX(-1);
     filter: invert(1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    z-index: 281;
-    height: 14px;
-    width: 14px;
-    opacity: 0;
+    position: absolute;
+    margin-right: 1px;
+    margin-top: 2px;
+    height: 15px;
+    width: 15px;
     -webkit-filter: invert(1);
     -webkit-transform: scaleX(-1);
     -moz-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     -o-transform: scaleX(-1);
-  }
+}
+
+.flex_lower_right>.health_icon {
+    /* margin-right: 2px; */
+    height: 19px;
+    width: 19px;
+    background-image: url(../../../files/img/hp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.flex_lower_right>.health_text {
+    margin-right: 8px;
+    font-size: 19px;
+    font-family: 'Bebas Neue Pro';
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(236, 236, 236);
+    /* font-weight: 900; */
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 3;
+    margin-right: 2px;
+}
+  
   
   .players_right_container>.player_container>.bomb_defuse_background {
     background-color: rgb(236, 236, 236);
@@ -2927,37 +3019,6 @@ sub {
     width: 14px;
   }
   
-  .players_right_container>.player_container>.health_icon {
-    position: absolute;
-    left: 1px;
-    top: 181px;
-    z-index: 282;
-    height: 19px;
-    width: 19px;
-    background-image: url(../../../files/img/hp.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-  
-  .players_right_container>.player_container>.health_text {
-    font-size: 19px;
-    font-family: 'Bebas Neue Pro';
-    font-weight: bold;
-    font-style: normal;
-    color: rgb(236, 236, 236);
-    /* font-weight: 900; */
-    text-transform: uppercase;
-    line-height: 1.4;
-    text-align: left;
-    position: absolute;
-    right: 38px;
-    top: 177px;
-    z-index: 283;
-    height: 27px;
-    width: 38px;
-    letter-spacing: 3;
-  }
   
   .players_right_container>.player_container>.top_bar>.weapon_icon {
     position: absolute;
@@ -3024,8 +3085,30 @@ sub {
   
   
   /** LEFT SIDE - MONEY & STATS **/
-  
-  .players_right_container>.player_container>.bottom_bar>.moneys {
+
+  .flex_money_bomb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 59px;
+    z-index: 293;
+    height: 12px;
+    width: 96px;
+    box-sizing: border-box;
+    /*border: 2px solid blue;
+    */transition: all 0.5s ease 0s;
+}
+
+  .flex_money_bomb>.money {
+    height: 15px;
+    width: 61px;
+    background-color: rgb(47,47,47);
+    transition: all 0.5s ease 0s;
+  }
+
+  .flex_money_bomb>.money>.moneys {
     font-size: 12px;
     font-family: 'HelveticaNowText';
     font-weight: 600;
@@ -3036,53 +3119,85 @@ sub {
     line-height: 1.3;
     text-align: center;
     position: absolute;
-    right: 10px;
-    top: 59px;
-    z-index: 293;
-    height: 12px;
-    width: 61px;
-    letter-spacing: 1.8;
-  }
-  
-  .players_right_container>.player_container>.bottom_bar>.moneys_background { 
-    position: absolute;
-    right: 10px;
-    top: 59px;
-    z-index: 292;
     height: 15px;
     width: 61px;
-    z-index: 292;
-    background-color: rgba(47,47,47);
+    letter-spacing: 1.8;
+    transition: all 0.5s ease 0s;
+    
   }
-  
-  
-  .players_right_container>.player_container>.bottom_bar>.k_icon {
+
+  .flex_money_bomb>.defuse {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(236,236,236);
+    transition: all 0.5s ease 0s;
+  }
+
+  .flex_money_bomb>.defuse>.defuse_image {
+    height: 14px;
+    width: 14px;
+    background-image: url(../../files/img/elements/defuse.png);
+    filter : invert(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.5s ease 0s;
+  }
+
+  .flex_money_bomb>.bomb {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(236,236,236);
+    transition: all 0.5s ease 0s;
+  }
+
+  .flex_money_bomb>.bomb>.bomb_image {
+    height: 14px;
+    width: 14px;
+    background-image: url(../../files/img/elements/bomb.png);
+    filter : invert(100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 0.5s ease 0s;
+  }
+ 
+  .flex_kd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 34px;
+    z-index: 293;
+    height: 16px;
+    width: 96px;
+    /* box-sizing: border-box; */
+    /*border: 2px solid blue;
+    */transition: all 0.5s ease 0s;
+  }
+
+  .flex_kd>.k_icon {
     background-image: url(../../files/img/kills.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    position: absolute;
-    left: 5px;
-    top: 34px;
-    z-index: 283;
-    height: 16px;
+    height: 17px;
     width: 16px;
+    margin-left: 3px;
   }
   
-  .players_right_container>.player_container>.bottom_bar>.d_icon {
+  .flex_kd>.d_icon {
     background-image: url(../../files/img/deaths.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    position: absolute;
-    top: 33px;
-    left: 50px;
-    z-index: 283;
     height: 17px;
     width: 16px;
+    margin-left: 7px;
   }
   
-  .players_right_container>.player_container>.bottom_bar>.k {
+  .flex_kd>.k {
     font-size: 19px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
@@ -3092,16 +3207,12 @@ sub {
     /* font-weight: 600; */
     letter-spacing: 2;
     line-height: 1;
-    text-align: left;
-    position: absolute;
-    left: 26px;
-    top: 32px;
-    z-index: 283;
-    height: 25px;
-    width: 20px;
+    text-align: center;
+    margin-bottom: 4px;
+    margin-left: 5px;
   }
   
-  .players_right_container>.player_container>.bottom_bar>.d {
+  .flex_kd>.d {
     font-size: 19px;
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
@@ -3111,13 +3222,9 @@ sub {
     /* font-weight: 600; */
     letter-spacing: 2;
     line-height: 1;
-    text-align: left;
-    position: absolute;
-    top: 32px;
-    left: 72px;
-    z-index: 283;
-    height: 25px;
-    width: 20px;
+    text-align: center;
+    margin-bottom: 4px;
+    margin-left: 5px;
   }
 
 
@@ -4727,6 +4834,10 @@ sub {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transition: all 0.5s ease 0s !important;
+    -webkit-transition: all 0.5s ease 0s !important;
+    -moz-transition: all 0.5s ease 0s !important;
+    -ms-transition: all 0.5s ease 0s !important;
+    -o-transition: all 0.5s ease 0s !important;
 }
 
 .right_bonus>.bonus_box_2 {

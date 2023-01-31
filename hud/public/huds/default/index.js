@@ -640,12 +640,12 @@ function fillPlayer(player, nr, side, max) {
 
 
     if (statistics.round_kills > 0) {
-        $bottom.find(".k").html(statistics.kills);
+        $bottom.find(".flex_kd>.k").html(statistics.kills);
     } else {
-        $bottom.find(".k").html(statistics.kills);
+        $bottom.find(".flex_kd>.k").html(statistics.kills);
     }
 
-    $bottom.find(".d").text(statistics.deaths);
+    $bottom.find(".flex_kd>.d").text(statistics.deaths);
 
 
     //OBSERVED
@@ -674,7 +674,11 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".bomb_defuse_background").css("opacity", "0").css("transition", "all 0.5s ease 0s");
         $player.find(".bomb_defuse").css("opacity", "0").css("transition", "all 0.5s ease 0s");
         $player.find(".background").css("transform", "translateY(70px)").css("transition", "all 0.5s ease 0s");
-        $player.find(".Round_Kills").css("transform", "translateY(70px)").css("transition", "all 0.5s ease 0s");
+        if (statistics.round_kills > 0) {
+            $player.find(".Round_Kills").css("transform", "translateY(70px)").css("transition", "all 1.2s ease 0.9s");
+        } else {
+            $player.find(".Round_Kills").css("transform", "translateY(70px)").css("transition", "all 0.5s ease 0s");
+        }
         $player.find(".background").css("height", "150px").css("transition", "all 0.5s ease 0s");
         // $player.find(".Round_Kills>.background").css("height", "38px").css("transition", "all 0.5s ease 0s");
         $player.find(".health_icon").css("opacity", "0").css("transition", "all 0.5s ease 0s");
@@ -708,12 +712,12 @@ function fillPlayer(player, nr, side, max) {
 
     if (team == "ct") {
         $top.find(".health_bar").css("background", " linear-gradient( 0deg, rgba(" + dark_ct_color + ",1) 0%, rgba(" + ct_color + ",1) 100%)");
-
+        $player.find(".photo_container>.health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",0.9)20%, rgba(" + ct_color + ",0) 180%)");
         $player.find(".separator").css("background", "rgb(" + ct_color + ")");
 
     } else if (team == "t") {
         $top.find(".health_bar").css("background", " linear-gradient( 0deg, rgba(" + dark_t_color + ",1) 0%, rgba(" + t_color + ",1) 100%)");
-
+        $player.find(".photo_container>.health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",0.9)20%, rgba(" + t_color + ",0) 180%)");
         $player.find(".separator").css("background", "rgb(" + t_color + ")");
     }
 
@@ -726,6 +730,15 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".number").html(player.observer_slot);
 
         $top.find(".health_bar").css("height", statistics.health + "%");
+        $top.find(".health_red").css("height", statistics.health + "%");
+        $player.find(".photo_container>.health_shade").css("height", statistics.health + "%");
+        if (statistics.health < 35) {
+            $player.find(".photo_container>.health_shade").css("opacity", "0.8");
+        } else if (statistics.health == 0 ) {
+            $player.find(".photo_container>.health_shade").css("opacity", "0");
+        } else {
+            $player.find(".photo_container>.health_shade").css("opacity", "0");
+        }
         $player.find(".player_bar_shadow").css("height", statistics.health + "%");
 
         if (statistics.health == 0) {
@@ -763,7 +776,15 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".number").html(player.observer_slot);
 
         $top.find(".health_bar").css("height", statistics.health + "%");
-        $player.find(".player_bar_shadow").css("height", statistics.health + "%");
+        $top.find(".health_red").css("height", statistics.health + "%");
+        $player.find(".photo_container>.health_shade").css("height", statistics.health + "%");
+        if (statistics.health < 35) {
+            $player.find(".photo_container>.health_shade").css("opacity", "0.8");
+        } else if (statistics.health == 0 ) {
+            $player.find(".photo_container>.health_shade").css("opacity", "0");
+        } else {
+            $player.find(".photo_container>.health_shade").css("opacity", "0");
+        }
         if (statistics.health == 0) {
             var flash_amount = 0;
         } else {
@@ -800,7 +821,15 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".number").html("0");
 
         $top.find(".health_bar").css("height", statistics.health + "%");
-        $player.find(".player_bar_shadow").css("height", statistics.health + "%");
+        $top.find(".health_red").css("height", statistics.health + "%");
+        $player.find(".photo_container>.health_shade").css("height", statistics.health + "%");
+        if (statistics.health < 35) {
+            $player.find(".photo_container>.health_shade").css("opacity", "0.8");
+        } else if (statistics.health == 0 ) {
+            $player.find(".photo_container>.health_shade").css("opacity", "0");
+        } else {
+            $player.find(".photo_container>.health_shade").css("opacity", "0");
+        }
         if (statistics.health == 0) {
             var flash_amount = 0;
         } else {
@@ -838,20 +867,51 @@ function fillPlayer(player, nr, side, max) {
 
 
     if (statistics.helmet) {
-        $player.find(".helmet").css("opacity", "1");
+        $player.find(".helmet_background").css("display", "block");
     } else {
-        $player.find(".helmet").css("opacity", "0");
+        $player.find(".helmet_background").css("display", "none");
     }
     if (statistics.armor > 0) {
-        $player.find(".armor").css("opacity", "1");
+        $player.find(".armor_background").css("display", "block");
     } else {
-        $player.find(".armor").css("opacity", "0");
+        $player.find(".armor_background").css("display", "none");
     }
-    $player.find(".bomb_defuse").html(statistics.defusekit ? $("<img width='13px' />").attr("src", "/files/img/elements/defuse.png") : "");
+
+    if (statistics.health !== 0) {
+        if (team == "ct") {
+            if (statistics.defusekit) {
+                $player.find(".flex_money_bomb>.defuse").css("display", "block");
+            } else {
+                $player.find(".flex_money_bomb>.defuse").css("display", "none");
+            }
+            $player.find(".flex_money_bomb>.bomb").css("display", "none");
+        } else {
+            let flag = false;
+            for (let key in weapons) {
+                let weapon = weapons[key];
+                let type = weapon.type;
+                if (type == "C4") {
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                $player.find(".flex_money_bomb>.bomb").css("display", "none");
+            } else {
+                $player.find(".flex_money_bomb>.bomb").css("display", "block");
+            }
+            $player.find(".flex_money_bomb>.defuse").css("display", "none");
+        }
+    } else {
+        $player.find(".flex_money_bomb>.defuse").css("display", "none");
+        $player.find(".flex_money_bomb>.money").css("display", "none");
+        $player.find(".flex_money_bomb>.bomb").css("display", "none");
+    }
+
+    // $player.find(".bomb_defuse").html(statistics.defusekit ? $("<img width='13px' />").attr("src", "/files/img/elements/defuse.png") : "");
 
 
 
-    $bottom.find(".moneys").text("$" + statistics.money);
+    $bottom.find(".flex_money_bomb>.money>.moneys").text("$" + statistics.money);
 
     $bottom.find(".weapon_icon").html("");
     $bottom.find(".grenades").html("");
@@ -891,9 +951,6 @@ function fillPlayer(player, nr, side, max) {
                     }
                 }
             }
-        }
-        if (type == "C4") {
-            $player.find(".bomb_defuse").html($("<img width='12px' />").attr("src", "/files/img/elements/bomb.png").addClass("invert_brightness"));
         }
     }
 
