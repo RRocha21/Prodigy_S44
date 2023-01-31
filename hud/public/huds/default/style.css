@@ -2174,7 +2174,7 @@ sub {
     background: linear-gradient(0deg, rgba(47,47,47,0.9) 0%,rgba(47,47,47,0.9)65%, rgba(47,47,47,0) 100%);
 }
 
-.players_left_container>.player_container>.photo_container>.health_shade {
+.players_left_container>.player_container>.health_shade {
     position: absolute;
     bottom: 0px;
     left: 0px;

@@ -712,12 +712,12 @@ function fillPlayer(player, nr, side, max) {
 
     if (team == "ct") {
         $top.find(".health_bar").css("background", " linear-gradient( 0deg, rgba(" + dark_ct_color + ",1) 0%, rgba(" + ct_color + ",1) 100%)");
-        $player.find(".photo_container>.health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",0.9)20%, rgba(" + ct_color + ",0) 180%)");
+        $player.find(".health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)30%, rgba(" + ct_color + ",0) 170%)");
         $player.find(".separator").css("background", "rgb(" + ct_color + ")");
 
     } else if (team == "t") {
         $top.find(".health_bar").css("background", " linear-gradient( 0deg, rgba(" + dark_t_color + ",1) 0%, rgba(" + t_color + ",1) 100%)");
-        $player.find(".photo_container>.health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",0.9)20%, rgba(" + t_color + ",0) 180%)");
+        $player.find(".health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)30%, rgba(" + t_color + ",0) 170%)");
         $player.find(".separator").css("background", "rgb(" + t_color + ")");
     }
 
@@ -731,13 +731,13 @@ function fillPlayer(player, nr, side, max) {
 
         $top.find(".health_bar").css("height", statistics.health + "%");
         $top.find(".health_red").css("height", statistics.health + "%");
-        $player.find(".photo_container>.health_shade").css("height", statistics.health + "%");
+        $player.find(".health_shade").css("height", statistics.health + "%");
         if (statistics.health < 35) {
-            $player.find(".photo_container>.health_shade").css("opacity", "0.8");
+            $player.find(".health_shade").css("opacity", "0.8");
         } else if (statistics.health == 0 ) {
-            $player.find(".photo_container>.health_shade").css("opacity", "0");
+            $player.find(".health_shade").css("opacity", "0");
         } else {
-            $player.find(".photo_container>.health_shade").css("opacity", "0");
+            $player.find(".health_shade").css("opacity", "0");
         }
         $player.find(".player_bar_shadow").css("height", statistics.health + "%");
 
@@ -777,13 +777,13 @@ function fillPlayer(player, nr, side, max) {
 
         $top.find(".health_bar").css("height", statistics.health + "%");
         $top.find(".health_red").css("height", statistics.health + "%");
-        $player.find(".photo_container>.health_shade").css("height", statistics.health + "%");
+        $player.find(".health_shade").css("height", statistics.health + "%");
         if (statistics.health < 35) {
-            $player.find(".photo_container>.health_shade").css("opacity", "0.8");
+            $player.find(".health_shade").css("opacity", "0.8");
         } else if (statistics.health == 0 ) {
-            $player.find(".photo_container>.health_shade").css("opacity", "0");
+            $player.find(".health_shade").css("opacity", "0");
         } else {
-            $player.find(".photo_container>.health_shade").css("opacity", "0");
+            $player.find(".health_shade").css("opacity", "0");
         }
         if (statistics.health == 0) {
             var flash_amount = 0;
@@ -822,13 +822,13 @@ function fillPlayer(player, nr, side, max) {
 
         $top.find(".health_bar").css("height", statistics.health + "%");
         $top.find(".health_red").css("height", statistics.health + "%");
-        $player.find(".photo_container>.health_shade").css("height", statistics.health + "%");
+        $player.find(".health_shade").css("height", statistics.health + "%");
         if (statistics.health < 35) {
-            $player.find(".photo_container>.health_shade").css("opacity", "0.8");
+            $player.find(".health_shade").css("opacity", "0.8");
         } else if (statistics.health == 0 ) {
-            $player.find(".photo_container>.health_shade").css("opacity", "0");
+            $player.find(".health_shade").css("opacity", "0");
         } else {
-            $player.find(".photo_container>.health_shade").css("opacity", "0");
+            $player.find(".health_shade").css("opacity", "0");
         }
         if (statistics.health == 0) {
             var flash_amount = 0;
