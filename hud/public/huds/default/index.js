@@ -1580,15 +1580,10 @@ function updatePage(data) {
     var total_rounds = teams.left.score + teams.right.score;
     var total = total_rounds + 1;
 
-
     var videos_txt = ["../../sponsors/1.webm", "../../sponsors/2.webm", "../../sponsors/3.webm", "../../sponsors/4.webm"];
+    var videos_length = [14, 16, 15, 15];
 
-    console.log(videos_txt.length);
-    
 
-    console.log(total_rounds%3 == 2);
-
-    
 
     if (observed.steamid == 1 || !observed) {
         if (((phase.phase == "freezetime") && (total_rounds%3 == 2)) || (phase.phase == "paused" || phase.phase == "timeout_ct" || phase.phase == "timeout_t")) {
@@ -1606,6 +1601,15 @@ function updatePage(data) {
                 }
                 $(".bigger_sponsor>.inner").html("<video  width=560px autoplay muted><source src="+ videos_txt[bigger_sponsor_counter] +" type='video/webm'></video>");
             }
+            $("bigger_sponsor>.inner").on('ended', function() {
+                console.log("ended");
+            });
+
+            setInterval(function() {
+                $(".bigger_sponsor").css("opacity", "0");
+                $(".bigger_sponsor").css("transition", "all 0.2s ease 0s").css("transform", "translateY(300px)");
+            }, videos_length[bigger_sponsor_counter]*1000);
+
         } else {
             $(".observed_container").css("transition", "all 0.3s ease 0s").css("transform", "translateY(80px)");
             $(".observed_container").css("transition", "all 0.3s ease 0s").css("opacity", "0");
