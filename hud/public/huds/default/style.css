@@ -1474,7 +1474,7 @@ sub {
     bottom: 0px;
     left: 0px;
     z-index: 70;
-    background: linear-gradient( 0deg, rgba(224,83,83,1) 0%, rgba(224,83,83,1) 100%);
+    background: linear-gradient( 0deg, rgba(229,57,67,1) 0%, rgba(229,57,67,1) 100%);
 }
 
 .header_container>.bomb_countdown_container>.bomb {
@@ -1567,6 +1567,22 @@ sub {
     opacity: 0;
 }
 
+.Progress_Bar>.Center_Bar>.BackgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 197px;
+    height: 139px;
+    z-index: 324;
+    /* background-image: url(../../files/img/bomb_Img.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.85;
+}
+
+
+
 .Progress_Bar>.Center_Bar>.Player_Txt {
     position: absolute;
     font-size: 18px;
@@ -1580,11 +1596,11 @@ sub {
     letter-spacing: 1.1;
     text-align: center;
     right: 8px;
-    top: 40px;
+    top: 46px;
     width: 181px;
     height: 25px;
     z-index: 326;
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .Progress_Bar>.Center_Bar>.Center_Txt {
@@ -1592,16 +1608,17 @@ sub {
     font-family: 'Bebas Neue Pro';
     font-weight: bold;
     font-style: normal;
+    letter-spacing: 1.4;
     color: rgb(236, 236, 236);
     line-height: 1.4;
     text-align: center;
     position: absolute;
     left: -30px;
-    top: 70px;
+    top: 67px;
     width: 257px;
     height: 84px;
-    z-index: 323;
-    opacity: 0.7;
+    z-index: 326;
+    opacity: 1;
 }
 
 
@@ -1664,6 +1681,8 @@ sub {
     z-index: 281;
     height: 21px;
     width: 21px;
+    filter: invert(1);
+    -webkit-filter: invert(1);
 }
 
 /** OBSERVED - NADES, HEALTH, ARMOR **/
