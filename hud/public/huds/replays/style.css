@@ -2063,7 +2063,7 @@ sub {
     width: 181px;
     height: 25px;
     z-index: 326;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .Progress_Bar>.Center_Bar>.Center_Txt {
@@ -2079,8 +2079,8 @@ sub {
     top: 70px;
     width: 257px;
     height: 84px;
-    z-index: 323;
-    opacity: 0.7;
+    z-index: 326;
+    opacity: 0.9;
 }
 
 

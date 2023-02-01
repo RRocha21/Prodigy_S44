@@ -581,23 +581,23 @@ function fillPlayer(player, nr, side, max) {
             $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
 
         } else if (result == "1") {
-        if (player.observer_slot > 5) {
-            player_number = player.observer_slot - 5;
-        } else {
-            player_number = player.observer_slot;
+            if (player.observer_slot > 5) {
+                player_number = player.observer_slot - 5;
+            } else {
+                player_number = player.observer_slot;
+            }
+            if (team == "ct") {
+
+                $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/CT_"+player_number+".png"));
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
+                
+
+            } else {
+                $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/T_"+player_number+".png"));
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
+
+            }
         }
-        if (team == "ct") {
-
-            $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/CT_"+player_number+".png"));
-            $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            
-
-        } else {
-            $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/T_"+player_number+".png"));
-            $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-
-        }
-    }
 
 
     let gradient = "linear-gradient(to " + side + ", rgba(25,25,25,0)" + (100 - statistics.health) + "%, " + health_color + " " + (100 - statistics.health) + "%)";
@@ -746,6 +746,7 @@ function fillPlayer(player, nr, side, max) {
 
     } else if (team == "t") {
         $top.find(".health_bar").css("background", " linear-gradient( 0deg, rgba(" + dark_t_color + ",1) 0%, rgba(" + t_color + ",1) 100%)");
+        $player.find(".health_shade").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)75%, rgba(" + t_color + ",0) 100%)");
         $player.find(".separator").css("background", "rgb(" + t_color + ")");
     }
 
@@ -2946,6 +2947,7 @@ function updatePage(data) {
             } else if (phase.phase == "paused" || phase.phase == "timeout_ct" || phase.phase == "timeout_t") {
                 stopAnimationWinner();
                 $(".Progress_Bar>.Left_Team>.Progress").html("");
+                $(".header_container>.bomb_countdown_container>.bomb").css("animation", "");
                 $(".header_container>.bomb_countdown_container").css("transition", "opacity 0.5s ease 0s").css("opacity", "0");
                 if (data.info.bomb.state !== "planting") {
                     $(".Progress_Bar>.Left_Team>.Progress").css("width", "0px");
@@ -2977,6 +2979,7 @@ function updatePage(data) {
                     showGiveaway();
                 }
             } else {
+                $(".header_container>.bomb_countdown_container>.bomb").css("animation", "");
                 $(".header_container>.bomb_countdown_container>.background").css("height", "66px");
                 $(".header_container>.bomb_countdown_container>.background").css("height", "100%");
                 $(".header_container>.bomb_countdown_container").css("transition", "opacity 0.5s ease 0s").css("opacity", "0");
