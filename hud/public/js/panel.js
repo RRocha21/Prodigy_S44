@@ -30,6 +30,7 @@ function loadMatch(data) {
             $("#map_3_right_result").val("auto").val(data.map_3_res.map_right_res);
             $("#map_3_left_result").val("auto").val(data.map_3_res.map_left_res);
             $("#server").val("auto").val(data.server.server_type);
+            $("#letters").val("auto").val(data.letter.letters);
     }
 
     if ($("#botype").val() == "bo3") {
@@ -90,7 +91,11 @@ $(document).ready(() => {
             },
             server: {
                 server_type: $("#server").val()
+            },
+            letter: {
+                letters: $("#letters").val()
             }
+
         };
         io.emit("update_match", match);
     });
@@ -108,7 +113,7 @@ $(document).ready(() => {
                 map2: $("#map_pick_2").val(),
                 map3: $("#map_pick_3").val(),
                 map_current: $("#map_playing").val(),
-                sides_swap: $("#swapsides").val(),
+                sides_swap: $("#swapsides").val()
             },
             map_1_res: {
                 map_right_res: $("#map_1_left_result").val(),
@@ -124,6 +129,9 @@ $(document).ready(() => {
             },
             server: {
                 server_type: $("#server").val()
+            },
+            letter: {
+                letters: $("#letters").val()
             }
         };
         if($("#team_1_score").val() == "0") { 

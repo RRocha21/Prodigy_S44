@@ -106,6 +106,9 @@ $(document).ready(function () {
         getMatchType: function () {
             return (this.info.teams && this.info.teams.match ? this.info.teams.match : false);
         },
+        getLetters: function () {
+            return (this.info.teams && this.info.teams.letters ? this.info.teams.letters : false);
+        },
         getMatch: function () {
             return this.info.teams || false;
         },
