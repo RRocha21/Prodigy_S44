@@ -49,7 +49,7 @@ var warning = "229,57,67";
 
 var bigger_sponsor_background = 0;
 var flag_sponsor = false;
-
+var myTimer;
 /* -------------------------------- */
 var count = 1;
 var bigger_sponsor_counter = Math.floor(Math.random() * 4);
@@ -59,6 +59,9 @@ var txt = ["../../files/img/hud_elements/logo_prodigies.png", "../../files/img/h
 // var txt_sponsor = "../../sponsors/rtp_logo.png";
 var txt_sponsor = ["../../sponsors/sponsor.png", "../../sponsors/sponsor_2.png", "../../sponsors/sponsor_3.png", "../../sponsors/sponsor_4.png", "../../sponsors/sponsor_5.png"];
 var count = 1;
+
+var myTimer = setInterval(function() {
+}, 1);
 
 $(document).ready(
     function() {
@@ -675,13 +678,10 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".bomb_defuse_background").css("opacity", "0").css("transition", "all 0.5s ease 0s");
         $player.find(".bomb_defuse").css("opacity", "0").css("transition", "all 0.5s ease 0s");
         $player.find(".background").css("transform", "translateY(70px)").css("transition", "all 0.5s ease 0s");
-        if (statistics.round_kills > 0) {
-            $player.find(".Round_Kills").css("transform", "translateY(70px)").css("transition", "all 1.2s ease 0.9s");
-        } else {
-            $player.find(".Round_Kills").css("transform", "translateY(70px)").css("transition", "all 0.5s ease 0s");
-        }
+        $player.find(".Round_Kills").css("transform", "translateY(70px)").css("transition", "all 0.5s ease 0s");
         $player.find(".background").css("height", "150px").css("transition", "all 0.5s ease 0s");
         // $player.find(".Round_Kills>.background").css("height", "38px").css("transition", "all 0.5s ease 0s");
+        $top.find(".health_red").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
         $player.find(".health_icon").css("opacity", "0").css("transition", "all 0.5s ease 0s");
         $player.find(".armor_background").css("opacity", "0").css("transition", "all 0.5s ease 0s");
         $player.find(".k").css("transform", "translateY(147px)").css("transition", "all 0.5s ease 0s");
@@ -698,6 +698,7 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".Round_Kills").css("transform", "translateY(0px)").css("transition", "all 0.5s ease 0s");
         $player.find(".background").css("transform", "translateY(0px)").css("transition", "all 0.5s ease 0s");
         $player.find(".background").css("height", "220px").css("transition", "all 0.5s ease 0s");
+        $top.find(".health_red").css("opacity", "1").css("transition", "opacity 0.5s ease 0s");
         $player.find(".health_icon").css("opacity", "1").css("transition", "all 0.5s ease 0s");
         $player.find(".armor_background").css("opacity", "1").css("transition", "all 0.5s ease 0s");
         $player.find(".k").css("transform", "translateY(0px)").css("transition", "all 0.5s ease 0s");
@@ -731,7 +732,7 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".number").html(player.observer_slot);
 
         $top.find(".health_bar").css("height", statistics.health + "%");
-        $top.find(".health_red").css("height", statistics.health + "%");
+        $top.find(".health_red").css("height", statistics.health + "%").css("transition", "height 1.3s ease 1s");
         $player.find(".health_shade").css("height", statistics.health + "%");
         if (statistics.health < 40) {
             $player.find(".health_shade").css("opacity", "0.8");
@@ -776,7 +777,7 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".number").html(player.observer_slot);
 
         $top.find(".health_bar").css("height", statistics.health + "%");
-        $top.find(".health_red").css("height", statistics.health + "%");
+        $top.find(".health_red").css("height", statistics.health + "%").css("transition", "height 1.3s ease 1s");
         $player.find(".health_shade").css("height", statistics.health + "%");
         if (statistics.health < 35) {
             $player.find(".health_shade").css("opacity", "0.8");
@@ -820,7 +821,7 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".number").html("0");
 
         $top.find(".health_bar").css("height", statistics.health + "%");
-        $top.find(".health_red").css("height", statistics.health + "%");
+        $top.find(".health_red").css("height", statistics.health + "%").css("transition", "height 1.3s ease 1s");
         $player.find(".health_shade").css("height", statistics.health + "%");
         if (statistics.health < 35) {
             $player.find(".health_shade").css("opacity", "0.8");
@@ -1586,9 +1587,12 @@ function updatePage(data) {
 
     
 
-    if (!observed) {
+    if (observed.steamid == 1 || !observed) {
         if (((phase.phase == "freezetime") && (total_rounds%3 == 2)) || (phase.phase == "paused" || phase.phase == "timeout_ct" || phase.phase == "timeout_t")) {
+            console.log(flag_sponsor);
+            
             if ($(".bigger_sponsor>.inner").html() == "" && !flag_sponsor) {
+                console.log("entrou aqui crl");
                 $(".observed_container").css("transition", "all 0.3s ease 0s").css("transform", "translateY(300px)");
                 $(".observed_container").css("transition", "all 0.3s ease 0s").css("opacity", "0");
                 $(".observed_container>.photo_container").css("opacity", "0");
@@ -1599,13 +1603,12 @@ function updatePage(data) {
                 if (bigger_sponsor_counter >= 4) {
                     bigger_sponsor_counter = 0;
                 }
-                flag_sponsor = true;
+                console.log("chegou aqui crl");
                 $(".bigger_sponsor>.inner").html("<video  width=560px autoplay muted><source src="+ videos_txt[bigger_sponsor_counter] +" type='video/webm'></video>");
-            }
-            if (flag_sponsor){
-                setInterval(function() {
+                flag_sponsor = true;
+                if (myTimer) clearInterval(myTimer);
+                myTimer = setInterval(function() {
                     if (flag_sponsor){
-                        console.log("passou aqui");
                         $(".bigger_sponsor").css("opacity", "0");
                         $(".bigger_sponsor").css("transition", "all 0.3s ease 0s").css("transform", "translateY(300px)");
                         $(".observed_container").css("transition", "all 0.3s ease 0s").css("transform", "translateY(80px)");
@@ -1618,6 +1621,7 @@ function updatePage(data) {
             }
 
         } else {
+            console.log("entrou aqui");
             $(".observed_container").css("transition", "all 0.3s ease 0s").css("transform", "translateY(80px)");
             $(".observed_container").css("transition", "all 0.3s ease 0s").css("opacity", "0");
             $(".observed_container>.photo_container").css("opacity", "0");
@@ -1626,6 +1630,7 @@ function updatePage(data) {
             $(".sponsor").css("transition", "all 0.3s ease 0s").css("transform", "translateY(0px)");
             $(".bigger_sponsor>.inner").html("");
             flag_sponsor = false;
+            clearInterval(myTimer);
             // console.log("passou aqui");
         }
     } else if (observed) {
@@ -1639,6 +1644,7 @@ function updatePage(data) {
         $(".sponsor").css("transition", "all 0.3s ease 0.0s").css("transform", "translateY(0px)");
         $(".bigger_sponsor>.inner").html("");
         flag_sponsor = false;
+        clearInterval(myTimer);
     }
 
 
@@ -2252,7 +2258,7 @@ function updatePage(data) {
                 defuse_countdown = 0.0;
             }
 
-            if (defuse_countdown < 0.2) {
+            if (defuse_countdown < 0.1) {
                 $(".bomb").html("");
                 $(".bomb").css("animation", "");
             }
@@ -2263,7 +2269,7 @@ function updatePage(data) {
 
             if ($(".Progress_Bar>.Center_Bar").hasClass("longd")) {
                 // console.log("longd");
-                if (data.info.bomb.countdown < 9.70) {
+                if (data.info.bomb.countdown < 9.90) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;
@@ -2287,9 +2293,11 @@ function updatePage(data) {
                 }
             } else {
                 // console.log("shortd");
-                if (data.info.bomb.countdown < 4.70) {
+                if (data.info.bomb.countdown < 4.90) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
+                        var defuse_name = name;
+                        if (defuse_name.length > 13) defuse_name = defuse_name.substring(0, 13);
                         $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "url(../../files/img/DefuseKit_Img.png");
@@ -2297,6 +2305,8 @@ function updatePage(data) {
                         $(".Progress_Bar>.Left_Team").css("opacity", "1").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Left_Team>.Progress").css("width", progress_width).css("transition", "all 0.4s ease 0s");
                     } else {
+                        var defuse_name = name;
+                        if (defuse_name.length > 13) defuse_name = defuse_name.substring(0, 13);
                         $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "url(../../files/img/DefuseKit_Img.png");
@@ -2306,6 +2316,8 @@ function updatePage(data) {
                     }
                 } else if ($(".Progress_Bar>.Center_Bar>.Center_Txt").text() == "DEFUSING BOMB") {
                     if (side == "left") {
+                        var defuse_name = name;
+                        if (defuse_name.length > 13) defuse_name = defuse_name.substring(0, 13);
                         $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "url(../../files/img/DefuseKit_Img.png");
@@ -2313,6 +2325,8 @@ function updatePage(data) {
                         $(".Progress_Bar>.Left_Team").css("opacity", "1").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Left_Team>.Progress").css("width", progress_width).css("transition", "all 0.4s ease 0s");
                     } else {
+                        var defuse_name = name;
+                        if (defuse_name.length > 13) defuse_name = defuse_name.substring(0, 13);
                         $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "url(../../files/img/DefuseKit_Img.png");
