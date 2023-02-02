@@ -781,7 +781,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
-        $player.find(".flash_2").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         l_team_value = l_team_value + statistics.money;
 
@@ -828,7 +827,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
-        $player.find(".flash_2").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         if (statistics.health == 0) {
             gradient = "linear-gradient(to " + side + ", rgb(25,25,25)" + (100 - statistics.health) + "%, " + health_color + " " + (100 - statistics.health) + "%)";
@@ -876,7 +874,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
-        $player.find(".flash_2").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         if (statistics.health == 0) {
             gradient = "linear-gradient(to " + side + ", rgb(25,25,25)" + (100 - statistics.health) + "%, " + health_color + " " + (100 - statistics.health) + "%)";
@@ -2309,11 +2306,11 @@ function updatePage(data) {
 
 
             progress_width = defuse_countdown * 100 / 10 + "%";
-
+            $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
 
             if ($(".Progress_Bar>.Center_Bar").hasClass("longd")) {
                 // console.log("longd");
-                if (data.info.bomb.countdown < 9.90) {
+                if (data.info.bomb.countdown < 9.70) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;
@@ -2337,7 +2334,7 @@ function updatePage(data) {
                 }
             } else {
                 // console.log("shortd");
-                if (data.info.bomb.countdown < 4.90) {
+                if (data.info.bomb.countdown < 4.70) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;
