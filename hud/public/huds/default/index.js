@@ -750,6 +750,8 @@ function fillPlayer(player, nr, side, max) {
         $player.find(".separator").css("background", "rgb(" + t_color + ")");
     }
 
+
+
     if (player.observer_slot <= 5) {
         console.log(letters);
         console.log(left_name_team.toUpperCase());
@@ -773,6 +775,24 @@ function fillPlayer(player, nr, side, max) {
         } else {
             $player.find(".health_shade").css("opacity", "0");
         }
+
+        if (result != "1") {
+            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
+    
+        } else if (result == "1") {
+            if (player.observer_slot > 5) {
+                player_number = player.observer_slot - 5;
+            } else {
+                player_number = player.observer_slot;
+            }
+            if (team == "ct") {
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
+            } else {
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
+            }
+        }
+
+
         $player.find(".player_bar_shadow").css("height", statistics.health + "%");
 
         if (statistics.health == 0) {
@@ -826,6 +846,23 @@ function fillPlayer(player, nr, side, max) {
         } else {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
+
+        if (result != "1") {
+            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
+    
+        } else if (result == "1") {
+            if (player.observer_slot > 5) {
+                player_number = player.observer_slot - 5;
+            } else {
+                player_number = player.observer_slot;
+            }
+            if (team == "ct") {
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
+            } else {
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
+            }
+        }
+
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         if (statistics.health == 0) {
@@ -873,6 +910,23 @@ function fillPlayer(player, nr, side, max) {
         } else {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
+
+        if (result != "1") {
+            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
+    
+        } else if (result == "1") {
+            if (player.observer_slot > 5) {
+                player_number = player.observer_slot - 5;
+            } else {
+                player_number = player.observer_slot;
+            }
+            if (team == "ct") {
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
+            } else {
+                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
+            }
+        }
+
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         if (statistics.health == 0) {
@@ -936,6 +990,7 @@ function fillPlayer(player, nr, side, max) {
                 $player.find(".flex_money_bomb>.bomb").css("display", "none");
             } else {
                 $player.find(".flex_money_bomb>.bomb").css("display", "block");
+                $player.find(".flex_money_bomb>.bomb>.bomb_image").css("background-image", "url(../../files/img/elements/bomb.png)");
             }
             $player.find(".flex_money_bomb>.defuse").css("display", "none");
         }
