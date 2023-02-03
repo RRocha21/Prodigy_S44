@@ -2366,7 +2366,7 @@ function updatePage(data) {
 
             if ($(".Progress_Bar>.Center_Bar").hasClass("longd")) {
                 // console.log("longd");
-                if (data.info.bomb.countdown < 9.90) {
+                if (data.info.bomb.countdown < 9.50) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;
@@ -2390,7 +2390,7 @@ function updatePage(data) {
                 }
             } else {
                 // console.log("shortd");
-                if (data.info.bomb.countdown < 4.90) {
+                if (data.info.bomb.countdown < 4.50) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;

@@ -2287,7 +2287,7 @@ function updatePage(data) {
 
             if ($(".Progress_Bar>.Center_Bar").hasClass("longd")) {
                 // console.log("longd");
-                if (data.info.bomb.countdown < 9.70) {
+                if (data.info.bomb.countdown < 9.50) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
@@ -2307,7 +2307,7 @@ function updatePage(data) {
                 }
             } else {
                 // console.log("shortd");
-                if (data.info.bomb.countdown < 4.70) {
+                if (data.info.bomb.countdown < 4.50) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         $(".Progress_Bar>.Center_Bar>.Player_Txt").html(name);
