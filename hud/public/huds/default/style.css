@@ -2719,6 +2719,9 @@ sub {
     -moz-transition: all 0.4s ease-in-out 0s;
     -ms-transition: all 0.4s ease-in-out 0s;
     -o-transition: all 0.4s ease-in-out 0s;
+    mask-size: 150px;
+    mask-repeat: no-repeat;
+    mask-position: center bottom;
     -webkit-mask-size: 150px;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center bottom;
@@ -3231,6 +3234,9 @@ sub {
     -moz-transition: all 0.4s ease-in-out 0s;
     -ms-transition: all 0.4s ease-in-out 0s;
     -o-transition: all 0.4s ease-in-out 0s;
+    mask-size: 150px;
+    mask-repeat: no-repeat;
+    mask-position: center bottom;
     -webkit-mask-size: 150px;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center bottom;
