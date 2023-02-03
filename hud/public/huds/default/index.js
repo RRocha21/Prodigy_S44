@@ -976,7 +976,7 @@ function fillPlayer(player, nr, side, max) {
             } else {
                 $player.find(".flex_money_bomb>.defuse").css("display", "none");
             }
-            $player.find(".flex_money_bomb>.bomb").css("display", "none");
+            $player.find(".flex_money_bomb>.bomb_2").css("display", "none");
         } else {
             let flag = false;
             for (let key in weapons) {
@@ -987,17 +987,18 @@ function fillPlayer(player, nr, side, max) {
                 }
             }
             if (!flag) {
-                $player.find(".flex_money_bomb>.bomb").css("display", "none");
+                $player.find(".flex_money_bomb>.bomb_2").css("display", "none");
             } else {
-                $player.find(".flex_money_bomb>.bomb").css("display", "block");
-                $player.find(".flex_money_bomb>.bomb>.bomb_image").css("background-image", "url(../../files/img/elements/bomb.png)");
+                $player.find(".flex_money_bomb>.bomb_2").css("display", "block");
+                $player.find(".flex_money_bomb>.bomb_2>.bomb_image").css("display", "block");
+                $player.find(".flex_money_bomb>.bomb_2>.bomb_image").css("background-image", "url(../../files/img/elements/bomb.png)");
             }
             $player.find(".flex_money_bomb>.defuse").css("display", "none");
         }
     } else {
         $player.find(".flex_money_bomb>.defuse").css("display", "none");
         $player.find(".flex_money_bomb>.money").css("display", "none");
-        $player.find(".flex_money_bomb>.bomb").css("display", "none");
+        $player.find(".flex_money_bomb>.bomb_2").css("display", "none");
     }
 
     // $player.find(".bomb_defuse").html(statistics.defusekit ? $("<img width='13px' />").attr("src", "/files/img/elements/defuse.png") : "");
@@ -1392,10 +1393,10 @@ function updatePage(data) {
 
     if ((matchup && matchup.toLowerCase() !== "bo3") || !matchup) {
         bo = 1;
-        $(".header_container>.left_series>.bo1").css("opacity", "1");
+        $(".header_container>.left_series>.bo1").css("opacity", "0");
         $(".header_container>.left_series>.bo3_map1").css("opacity", "0");
         $(".header_container>.left_series>.bo3_map2").css("opacity", "0");
-        $(".header_container>.right_series>.bo1").css("opacity", "1");
+        $(".header_container>.right_series>.bo1").css("opacity", "0");
         $(".header_container>.right_series>.bo3_map1").css("opacity", "0");
         $(".header_container>.right_series>.bo3_map2").css("opacity", "0");
         var map3_let = data.map();

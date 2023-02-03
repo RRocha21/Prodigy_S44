@@ -1925,8 +1925,8 @@ sub {
 .header_container>.bomb_countdown_container {
     position: absolute;
     width: 147px;
-    height: 86px;
-    bottom: -30px;
+    height: 66px;
+    bottom: -10px;
     left: 412px;
     z-index: 70;
     opacity: 0;
@@ -1935,7 +1935,7 @@ sub {
 .header_container>.bomb_countdown_container>.background {
     position: absolute;
     width: 147px;
-    height: 86px;
+    height: 66px;
     bottom: 0px;
     left: 0px;
     z-index: 70;
@@ -1945,7 +1945,7 @@ sub {
 .header_container>.bomb_countdown_container>.bomb {
     position: absolute;
     width: 147px;
-    height: 76px;
+    height: 56px;
     bottom: 5px;
     left: 0px;
     z-index: 70;
