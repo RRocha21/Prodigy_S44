@@ -2356,11 +2356,15 @@ function updatePage(data) {
                         $(".Progress_Bar>.Center_Bar").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Right_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "");
+                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                     } else if (teams.right.side == "ct") {
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html(" ");
                         $(".Progress_Bar>.Center_Bar").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "");
+                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                     }
                 }
         }
