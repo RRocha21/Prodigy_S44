@@ -2439,8 +2439,6 @@ function updatePage(data) {
 
         function stopAnimationDefuse() {
 
-            $(".Progress_Bar").hasClass("longd");
-
                 if ($(".Progress_Bar>.Center_Bar>.Center_Txt").text() == "DEFUSING BOMB") {
                     if (teams.left.side == "ct") {
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html(" ");
@@ -2450,7 +2448,7 @@ function updatePage(data) {
                     } else if (teams.right.side == "ct") {
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html(" ");
                         $(".Progress_Bar>.Center_Bar").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
-                        $(".Progress_Bar>.Right_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Center_Bar").css("background-image" , "");
                     }
                 }
