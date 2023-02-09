@@ -193,7 +193,7 @@ function fillObserved(player) {
 
     if (player.team == "CT" && teams.left.side == "ct") {
 
-        if (left_name_team.toUpperCase() !== "THE PRODIGIES") {
+        if (left_name_team.toUpperCase() !== "THE PRODIGIES -") {
             obs_player_name = obs_player_name.slice(letters);
         } 
 
@@ -207,7 +207,7 @@ function fillObserved(player) {
 
     } else if (player.team == "CT" && teams.right.side == "ct") {
 
-        if (right_name_team.toUpperCase() !== "THE PRODIGIES") {
+        if (right_name_team.toUpperCase() !== "THE PRODIGIES -") {
             obs_player_name = obs_player_name.slice(letters);
         } 
 
@@ -2363,8 +2363,8 @@ function updatePage(data) {
                         $(".Progress_Bar>.Center_Bar").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Center_Bar>.BackgroundImage").css("background-image" , "");
-                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
-                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Right_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Right_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                     }
                 }
         }
