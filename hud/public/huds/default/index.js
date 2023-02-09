@@ -197,7 +197,7 @@ function fillObserved(player) {
 
     if (player.team == "CT" && teams.left.side == "ct") {
 
-        if (left_name_team.toUpperCase() !== "THE PRODIGIES") {
+        if (left_name_team.toUpperCase() !== "THE PRODIGIES -") {
             obs_player_name = obs_player_name.slice(letters);
         } 
 
@@ -210,7 +210,7 @@ function fillObserved(player) {
 
     } else if (player.team == "CT" && teams.right.side == "ct") {
 
-        if (right_name_team.toUpperCase() !== "THE PRODIGIES") {
+        if (right_name_team.toUpperCase() !== "THE PRODIGIES -") {
             obs_player_name = obs_player_name.slice(letters);
         } 
 
@@ -2366,7 +2366,7 @@ function updatePage(data) {
 
             if ($(".Progress_Bar>.Center_Bar").hasClass("longd")) {
                 // console.log("longd");
-                if (data.info.bomb.countdown < 9.50) {
+                if (data.info.bomb.countdown < 9.80) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;
@@ -2390,7 +2390,7 @@ function updatePage(data) {
                 }
             } else {
                 // console.log("shortd");
-                if (data.info.bomb.countdown < 4.50) {
+                if (data.info.bomb.countdown < 4.80) {
                     $(".Progress_Bar>.Center_Bar>.Center_Txt").html("DEFUSING BOMB");
                     if (side == "left") {
                         var defuse_name = name;
@@ -2443,12 +2443,12 @@ function updatePage(data) {
                     if (teams.left.side == "ct") {
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html(" ");
                         $(".Progress_Bar>.Center_Bar").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
-                        $(".Progress_Bar>.Right_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Center_Bar").css("background-image" , "");
                     } else if (teams.right.side == "ct") {
                         $(".Progress_Bar>.Center_Bar>.Center_Txt").html(" ");
                         $(".Progress_Bar>.Center_Bar").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
-                        $(".Progress_Bar>.Left_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
+                        $(".Progress_Bar>.Right_Team").css("opacity", "0").css("transition", "opacity 0.5s ease 0s");
                         $(".Progress_Bar>.Center_Bar").css("background-image" , "");
                     }
                 }
