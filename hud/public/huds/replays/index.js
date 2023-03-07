@@ -1353,36 +1353,17 @@ function updatePage(data) {
         $(".header_container>.right_series>.bo3_map2").css("opacity", "1");
 
         if (match.team_1.map_score == 1) {
-            if (teams.left.side == "ct") {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-            } else {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.left_series>.bo3_map1").css("background", "rgb(236,236,236)");
         } else if (match.team_1.map_score == 2) {
-            if (teams.left.side == "ct") {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-                $(".header_container>.left_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-
-            } else {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-                $(".header_container>.left_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.left_series>.bo3_map1").css("background", "rgb(236,236,236)");
+            $(".header_container>.left_series>.bo3_map2").css("background", "rgb(236,236,236)");
         }
 
         if (match.team_2.map_score == 1) {
-            if (teams.right.side == "ct") {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-            } else {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.right_series>.bo3_map1").css("background", "rgb(236,236,236)");
         } else if (match.team_2.map_score == 0) {
-            if (teams.right.side == "ct") {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-                $(".header_container>.right_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-            }   else {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-                $(".header_container>.right_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.right_series>.bo3_map1").css("background", "rgb(236,236,236)");
+            $(".header_container>.right_series>.bo3_map2").css("background", "rgb(236,236,236)");
         }
     } 
 

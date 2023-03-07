@@ -578,7 +578,6 @@ function fillPlayer(player, nr, side, max) {
 
         if (result != "1") {
             $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "/av/" + result));
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
 
         } else if (result == "1") {
             if (player.observer_slot > 5) {
@@ -589,12 +588,10 @@ function fillPlayer(player, nr, side, max) {
             if (team == "ct") {
 
                 $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/CT_"+player_number+".png"));
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
                 
 
             } else {
                 $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/T_"+player_number+".png"));
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
 
             }
         }
@@ -776,21 +773,6 @@ function fillPlayer(player, nr, side, max) {
             $player.find(".health_shade").css("opacity", "0");
         }
 
-        if (result != "1") {
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
-    
-        } else if (result == "1") {
-            if (player.observer_slot > 5) {
-                player_number = player.observer_slot - 5;
-            } else {
-                player_number = player.observer_slot;
-            }
-            if (team == "ct") {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            } else {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-            }
-        }
 
 
         $player.find(".player_bar_shadow").css("height", statistics.health + "%");
@@ -847,21 +829,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
 
-        if (result != "1") {
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
-    
-        } else if (result == "1") {
-            if (player.observer_slot > 5) {
-                player_number = player.observer_slot - 5;
-            } else {
-                player_number = player.observer_slot;
-            }
-            if (team == "ct") {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            } else {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-            }
-        }
 
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
 
@@ -911,21 +878,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
 
-        if (result != "1") {
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
-    
-        } else if (result == "1") {
-            if (player.observer_slot > 5) {
-                player_number = player.observer_slot - 5;
-            } else {
-                player_number = player.observer_slot;
-            }
-            if (team == "ct") {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            } else {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-            }
-        }
 
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
 
@@ -1412,69 +1364,50 @@ function updatePage(data) {
         $(".header_container>.right_series>.bo3_map2").css("opacity", "1");
 
         if (match.team_1.map_score == 1) {
-            if (teams.left.side == "ct") {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-            } else {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.left_series>.bo3_map1").css("background", "rgb(236,236,236)");
         } else if (match.team_1.map_score == 2) {
-            if (teams.left.side == "ct") {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-                $(".header_container>.left_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-
-            } else {
-                $(".header_container>.left_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-                $(".header_container>.left_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.left_series>.bo3_map1").css("background", "rgb(236,236,236)");
+            $(".header_container>.left_series>.bo3_map2").css("background", "rgb(236,236,236)");
         }
 
         if (match.team_2.map_score == 1) {
-            if (teams.right.side == "ct") {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-            } else {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.right_series>.bo3_map1").css("background", "rgb(236,236,236)");
         } else if (match.team_2.map_score == 0) {
-            if (teams.right.side == "ct") {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-                $(".header_container>.right_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_ct_color + ",1)) 0%, rgba(" + ct_color + ",1) 100%)");
-            }   else {
-                $(".header_container>.right_series>.bo3_map1").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-                $(".header_container>.right_series>.bo3_map2").css("background", "linear-gradient(0deg, rgba(" + dark_t_color + ",1)) 0%, rgba(" + t_color + ",1) 100%)");
-            }
+            $(".header_container>.right_series>.bo3_map1").css("background", "rgb(236,236,236)");
+            $(".header_container>.right_series>.bo3_map2").css("background", "rgb(236,236,236)");
         }
     } 
 
     // Apply
 
     var team_pick_right_name = teams.right.name;
-    if (team_pick_right_name.length > 10) team_pick_right_name = team_pick_right_name.substring(0, 10);
+    if (team_pick_right_name.length > 13) team_pick_right_name = team_pick_right_name.substring(0, 13);
 
     var team_pick_left_name = teams.left.name;
-    if (team_pick_left_name.length > 10) team_pick_left_name = team_pick_left_name.substring(0, 10);
+    if (team_pick_left_name.length > 13) team_pick_left_name = team_pick_left_name.substring(0, 13);
     /* MAP PICKS START  */
     if (swapsides == 0) {
-        $(".MapPick_BG>.Map1>.Team_Name").html("<font color='#fff'>" + teams.left.name + "</font>");
+        $(".MapPick_BG>.Map1>.Team_Name").html("<font color='#fff'>" + team_pick_left_name + "</font>");
         $(".MapPick_BG>.Map1").css("background", "rgb("+ left_color +")");
         $(".MapPick_BG>.Map1>.Map").css("background-image", "url(../../files/img/maps/" + map1 + ".jpg)");
         $(".MapPick_BG>.Map1>.Map_Name").html("<font color='#fff'>" + map1 + "</font>");
 
         if (current_map == 1) {
             $(".MapPick_BG>.Map1>.Map_Result").html("<font color='#fff'> CURRENT </font>");
-            $(".MapPick_BG>.Map1>.Map_Shade").css("box-shadow", "inset 0px -85px 85px -85px rgb("+ left_color +")");
+            $(".MapPick_BG>.Map1>.Map_Shade").css("box-shadow", "inset 0px -55px 55px -55px rgb("+ left_color +")");
         } else {
             $(".MapPick_BG>.Map1>.Map").css("filter", "grayscale(1)");
             $(".MapPick_BG>.Map1>.Map_Result").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
         }
 
-        $(".MapPick_BG>.Map2>.Team_Name").html("<font color='#fff'> " + teams.right.name + " </font>");
+        $(".MapPick_BG>.Map2>.Team_Name").html("<font color='#fff'> " + team_pick_right_name + " </font>");
         $(".MapPick_BG>.Map2").css("background", "rgb("+right_color+")");
         $(".MapPick_BG>.Map2>.Map").css("background-image", "url(../../files/img/maps/" + map2 + ".jpg)");
         $(".MapPick_BG>.Map2>.Map_Name").html("<font color='#fff'>" + map2 + "</font>");
 
         if (current_map == 2) {
             $(".MapPick_BG>.Map2>.Map_Result").html("<font color='#fff'>CURRENT</font>");
-            $(".MapPick_BG>.Map2>.Map_Shade").css("box-shadow", "inset 0px -85px 85px -85px rgb("+ right_color +")");
+            $(".MapPick_BG>.Map2>.Map_Shade").css("box-shadow", "inset 0px -55px 55px -55px rgb("+ right_color +")");
         } else if (current_map == 1) {
             $(".MapPick_BG>.Map2>.Map_Result").html("<font color='#fff'> NEXT </font>");
         } else {
@@ -1494,27 +1427,27 @@ function updatePage(data) {
             $(".MapPick_BG>.Map3>.Map_Result").html("<font color='#fff'>CURRENT</font>");
         }
     } else {
-        $(".MapPick_BG>.Map1>.Team_Name").html("<font color='#fff'>" + teams.right.name + "</font>");
+        $(".MapPick_BG>.Map1>.Team_Name").html("<font color='#fff'>" + team_pick_right_name + "</font>");
         $(".MapPick_BG>.Map1").css("background", "rgb("+ right_color +")");
         $(".MapPick_BG>.Map1>.Map").css("background-image", "url(../../files/img/maps/" + map1 + ".jpg)");
         $(".MapPick_BG>.Map1>.Map_Name").html("<font color='#fff'>" + map1 + "</font>");
 
         if (current_map == 1) {
             $(".MapPick_BG>.Map1>.Map_Result").html("<font color='#fff'> CURRENT </font>");
-            $(".MapPick_BG>.Map1>.Map_Shade").css("box-shadow", "inset 0px -85px 85px -85px rgb("+ right_color +")");
+            $(".MapPick_BG>.Map1>.Map_Shade").css("box-shadow", "inset 0px -55px 55px -55px rgb("+ right_color +")");
         } else {
             $(".MapPick_BG>.Map1>.Map").css("filter", "grayscale(1)");
             $(".MapPick_BG>.Map1>.Map_Result").html("<font color='#fff'>" + map1_res1 + " - " + map1_res2 + "</font>");
         }
 
-        $(".MapPick_BG>.Map2>.Team_Name").html("<font color='#fff'> " + teams.left.name + " </font>");
+        $(".MapPick_BG>.Map2>.Team_Name").html("<font color='#fff'> " + team_pick_left_name + " </font>");
         $(".MapPick_BG>.Map2").css("background", "rgb("+ left_color +")");
         $(".MapPick_BG>.Map2>.Map").css("background-image", "url(../../files/img/maps/" + map2 + ".jpg)");
         $(".MapPick_BG>.Map2>.Map_Name").html("<font color='#fff'>" + map2 + "</font>");
 
         if (current_map == 2) {
             $(".MapPick_BG>.Map2>.Map_Result").html("<font color='#fff'>CURRENT</font>");
-            $(".MapPick_BG>.Map2>.Map_Shade").css("box-shadow", "inset 0px -85px 85px -85px rgb("+ left_color +")");
+            $(".MapPick_BG>.Map2>.Map_Shade").css("box-shadow", "inset 0px -55px 55px -55px rgb("+ left_color +")");
         } else if (current_map == 1) {
             $(".MapPick_BG>.Map2>.Map_Result").html("<font color='#fff'> NEXT </font>");
         } else {

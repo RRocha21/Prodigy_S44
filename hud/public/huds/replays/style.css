@@ -1317,14 +1317,15 @@ sub {
 
 .header_container>.left_series>.bo3_map2 {
     position: absolute;
-    border-width: 3px;
+    border-width: 2px;
     border-color: #fff;
     border-style: solid;
-    left: 6px;
-    top: 10px;
-    width: 7px;
-    height: 22px;
+    left: 7px;
+    bottom: 10px;
+    width: 9px;
+    height: 25px;
     z-index: 58;
+    box-sizing: border-box;
 }
 
 .header_container>.left_series>.bo3_map1 {
@@ -1332,11 +1333,12 @@ sub {
     border-width: 2px;
     border-color: #fff;
     border-style: solid;
-    right: 6px;
-    top: 44px;
-    width: 7px;
-    height: 22px;
+    left: 7px;
+    top: 10px;
+    width: 9px;
+    height: 25px;
     z-index: 58;
+    box-sizing: border-box;
 }
 
 .header_container>.right_series {
@@ -1367,11 +1369,12 @@ sub {
     border-width: 2px;
     border-color: #fff;
     border-style: solid;
-    right: 6px;
-    top: 10px;
-    width: 7px;
-    height: 22px;
+    right: 7px;
+    bottom: 10px;
+    width: 9px;
+    height: 25px;
     z-index: 58;
+    box-sizing: border-box;
 }
 
 .header_container>.right_series>.bo3_map1 {
@@ -1379,11 +1382,12 @@ sub {
     border-width: 2px;
     border-color: #fff;
     border-style: solid;
-    right: 6px;
-    top: 44px;
-    width: 7px;
-    height: 22px;
+    right: 7px;
+    top: 10px;
+    width: 9px;
+    height: 25px;
     z-index: 58;
+    box-sizing: border-box;
 }
 
 .header_container>.time {
