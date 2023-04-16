@@ -82,19 +82,19 @@ $(document).ready(
         }, 15000);
     });
 
-$(document).ready(
-    function() {
-        setInterval(function() {
-            if (numtext2 >= 4) {
-                numtext2 = 0;
-            } else {
-                numtext2 = numtext2 + 1;
-            }
-            $(".sponsor > .inner").fadeOut(function() {
-                $(this).css("background-image", "url(" + txt_sponsor[numtext2] +")");
-            }).fadeIn();
-        }, 10000);
-    });
+// $(document).ready(
+//     function() {
+//         setInterval(function() {
+//             if (numtext2 >= 4) {
+//                 numtext2 = 0;
+//             } else {
+//                 numtext2 = numtext2 + 1;
+//             }
+//             $(".sponsor > .inner").fadeOut(function() {
+//                 $(this).css("background-image", "url(" + txt_sponsor[numtext2] +")");
+//             }).fadeIn();
+//         }, 10000);
+//     });
 
 
 
@@ -1612,7 +1612,7 @@ function updatePage(data) {
     var total_rounds = teams.left.score + teams.right.score;
     var total = total_rounds + 1;
 
-    var videos_txt = ["../../sponsors/1.webm", "../../sponsors/2.webm", "../../sponsors/3.webm", "../../sponsors/4.webm"];
+    var videos_txt = ["../../sponsors/1.webm", "../../sponsors/2.webm", "../../sponsors/3.webm"];
     var videos_length = [14, 16, 15, 15];
 
     
@@ -1630,7 +1630,7 @@ function updatePage(data) {
                 $(".bigger_sponsor").css("opacity", "1");
                 $(".bigger_sponsor").css("transition", "all 0.7s ease 0.3s").css("transform", "translateY(0px)");
                 bigger_sponsor_counter++;
-                if (bigger_sponsor_counter >= 4) {
+                if (bigger_sponsor_counter >= 3) {
                     bigger_sponsor_counter = 0;
                 }
                 console.log("chegou aqui crl");

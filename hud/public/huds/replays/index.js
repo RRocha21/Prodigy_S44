@@ -78,19 +78,19 @@ $(document).ready(
         }, 15000);
     });
 
-$(document).ready(
-    function() {
-        setInterval(function() {
-            if (numtext2 >= 4) {
-                numtext2 = 0;
-            } else {
-                numtext2 = numtext2 + 1;
-            }
-            $(".sponsor > .inner").fadeOut(function() {
-                $(this).css("background-image", "url(" + txt_sponsor[numtext2] +")");
-            }).fadeIn();
-        }, 10000);
-    });
+// $(document).ready(
+//     function() {
+//         setInterval(function() {
+//             if (numtext2 >= 4) {
+//                 numtext2 = 0;
+//             } else {
+//                 numtext2 = numtext2 + 1;
+//             }
+//             $(".sponsor > .inner").fadeOut(function() {
+//                 $(this).css("background-image", "url(" + txt_sponsor[numtext2] +")");
+//             }).fadeIn();
+//         }, 10000);
+//     });
 
 
 
@@ -582,12 +582,9 @@ function fillPlayer(player, nr, side, max) {
             player_number = player.observer_slot;
         }
         if (team == "ct") {
-
             $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/CT_"+player_number+".png"));
-            $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
         } else {
             $player.find(".photo_container>.photo_player").html($("<img width='150px' height='150px'  />").attr("src", "../../files/img/players/T_"+player_number+".png"));
-            $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
         }
     }
 
@@ -747,22 +744,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
 
-        if (result != "1") {
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
-    
-        } else if (result == "1") {
-            if (player.observer_slot > 5) {
-                player_number = player.observer_slot - 5;
-            } else {
-                player_number = player.observer_slot;
-            }
-            if (team == "ct") {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            } else {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-            }
-        }
-
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         l_team_value = l_team_value + statistics.money;
@@ -815,22 +796,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = (statistics.flashed * 0.9 / 255);
         }
 
-        if (result != "1") {
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
-    
-        } else if (result == "1") {
-            if (player.observer_slot > 5) {
-                player_number = player.observer_slot - 5;
-            } else {
-                player_number = player.observer_slot;
-            }
-            if (team == "ct") {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            } else {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-            }
-        }
-
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
 
         if (statistics.health == 0) {
@@ -880,22 +845,6 @@ function fillPlayer(player, nr, side, max) {
             var flash_amount = 0;
         } else {
             var flash_amount = (statistics.flashed * 0.9 / 255);
-        }
-
-        if (result != "1") {
-            $player.find(".flash").css("mask-image", "url(/av/" + result+ ")");
-    
-        } else if (result == "1") {
-            if (player.observer_slot > 5) {
-                player_number = player.observer_slot - 5;
-            } else {
-                player_number = player.observer_slot;
-            }
-            if (team == "ct") {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/CT_"+player_number+".png)");
-            } else {
-                $player.find(".flash").css("mask-image", "url(../../files/img/players/T_"+player_number+".png)");
-            }
         }
 
         $player.find(".flash").css("background", "rgba(255,255,255," + flash_amount + ")");
