@@ -2706,7 +2706,7 @@ sub {
 
 .players_left_container>.player_container>.flash {
     width: 96px;
-    height: 220px;
+    height: 170px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -3234,7 +3234,7 @@ sub {
   
   .players_right_container>.player_container>.flash {
     width: 96px;
-    height: 220px;
+    height: 170px;
     position: absolute;
     left: 0px;
     top: 0px;
